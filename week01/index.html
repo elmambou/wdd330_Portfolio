@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>WDD330: Week 01</title>
+</head>
+
+<body>
+  
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    
+    <main>
+        <h2>WDD 330: Portfolio For Week 01</h2>
+         
+        <h3>My Notes:</h3>
+        <p> I did not get the access code for SitePoint yet this week, even though I did place the order after following the link provided in I-Learn Canvas Announcement.
+            In the meantime, I read the sections about Localstorage in <strong><mark>Doing Stuff with Web Things_pdf document</mark></strong>, and I paid more attention to the exercises. 
+            Click on the link below to be directed to the exercise page.<br>
+           <br> <a href="exercise.html"><em>PLEASE CLICK HERE</em></a></p>
+        <p>The following are what I learned about <strong><mark>localStorage</mark></strong>, et <strong><mark>SessionStorage</mark></strong>:<br><br>
+            JavaScript local storage uses what techies call key-value pairs. 
+            LocalStorage is a data storage type of web storage. This allows the JavaScript sites and apps to store and access the data without any expiration date.
+            This means that the data will always be persisted and will not expire. So, data stored in the browser will be available even after closing the browser window 
+               In other word In short, all we can say is that the localStorage holds the data with no expiry date, which is available to the user even after closing the browser window..</p>
+            <h4> Methods, examples, advantages and limitations of LocalStorage:</h4>
+            <h4>Methods:</h4> 
+            <ul>
+                <li>setItem() This method is used to add the data through key and value to localStorage,</li>
+                <li>getItem() It is used to fetch or retrieve the value from the storage using the key,</li>
+                <li>removeItem()  It removes an item from storage by using the key,</li>
+                <li>clear()  It is used to gets clear all the storage,</li>
+                
+            </ul>
+            
+            <h4>Examples of LocalStorage:</h4>
+            <ul>
+                <li>localStorage.setItem(storyName,storyHTML), this is used to add data,</li>
+                <li>const res = localStorage.getItem("city"); this is used to retrieve data,</li>
+                <li>localStorage.removeItem("city"); this is used to remove data.</li>
+                <li>localStorage.clear(); this is used to clear localStorage.</li>
+            </ul>
+            
+            <h4> Advantages of localStorage:</h4>
+            <ul>
+                <li> The data collected by localStorage is stored in the browser. You can store 5 MB of data in the browser.</li>
+                <li> You can remove all the localStorage item by a single line code, i.e., clear().</li>
+                <li> It also has advantages over cookies because it can store more data than cookies</li>
+                <li> There is no expiry date of data stored by localStorage.</li>
+                <li> The localStorage data persist even after closing the browser window.</li>
+            </ul>
+
+            <h4> Limitation of localStorage:</h4>
+            <ul>
+                <li> Synchronous - Each operation executes one after another.</li>
+                <li> Insecurity and no data protection - Can be accessed using any code.</li>
+                <li> Do not store sensitive information, username and password in localStorage</li>
+                <li> Limited storage - Can only store a maximum of 5MB data</li>
+            </ul>
+           
+            <h3>Question:</h3>
+            <p> What is the difference between localStorage and SessionStorage?</p>
+     
+    </main>
+    <footer>
+          &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+         <a href="https://www.byui.edu/online" id="footer-link">BYU Idaho Online Learning</a>
+         <p id="update">  </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
