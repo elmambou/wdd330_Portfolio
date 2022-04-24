@@ -25,9 +25,10 @@
            <br> <a href="exercise.html"><em>PLEASE CLICK HERE</em></a></p>
         <p>The following are what I learned about <strong><mark>localStorage</mark></strong>, and <strong><mark>SessionStorage</mark></strong>:<br><br>
             JavaScript local storage uses what techies call key-value pairs. 
-            LocalStorage is a data storage type of web storage. This allows the JavaScript sites and apps to store and access the data without any expiration date.
-            This means that the data will always be persisted and will not expire. So, data stored in the browser will be available even after closing the browser window 
-               In other word In short, all we can say is that the localStorage holds the data with no expiry date, which is available to the user even after closing the browser window..</p>
+            LocalStorage is a data storage type of web storage. Using JavaScript you can store any information you want to use later.
+            This allows the JavaScript sites and apps to store and access the data without any expiration date.
+            
+               In other words, all we can say is that the localStorage holds the data with no expiry date, which is available to the user even after closing the browser window..</p>
             <h4> Methods, examples, advantages and limitations of LocalStorage:</h4>
             <h4>Methods:</h4> 
             <ul>
@@ -41,7 +42,7 @@
             <h4>Examples of LocalStorage:</h4>
             <ul>
                 <li>localStorage.setItem(storyName,storyHTML), this is used to add data,</li>
-                <li>const res = localStorage.getItem("city"); this is used to retrieve data,</li>
+                <li>var storyHTML = localStorage.getItem(storyName); this is used to retrieve a saved story,</li>
                 <li>localStorage.removeItem("city"); this is used to remove data.</li>
                 <li>localStorage.clear(); this is used to clear localStorage.</li>
             </ul>
