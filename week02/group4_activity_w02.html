@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WDD330: Week 02 - Team activity</title>
+
+  <script>
+
+    function show_text()
+    {
+      let user_input = document.getElementById("inputSum").value;
+      document.getElementById("outputSum").innerHTML = user_input;
+    }
+    
+    let sum_all = function(x){ 
+      let result = 0;
+      let multiplier = 1;
+      if(x < 0)
+      {
+        multiplier = -1;
+      }
+      
+      for(let i = 0; i <= x * multiplier; i++)
+      {
+        result += i * multiplier;
+      }
+      return result;
+    };
+    
+    function add_nums(x)
+    {  
+      if(Number.isInteger(Number(x)))
+      {
+        let number_sum = sum_all(x);
+        
+        // display total in the output div
+        document.getElementById("outputSum").innerHTML = number_sum;
+                 
+      }
+      else
+      {
+        //  When the button is pressed it should read the number from the input. If number not valid, it prompts a message to the user. 
+        alert("Please enter a valid, a whole number!");
+      }
+    }
+    
+    const add = (a, b) => a + b;
+    function add_inputs()
+    {
+      let inputs = return_inputs();
+      
+      document.getElementById("output").innerHTML = add(inputs[0], inputs[1]);
+    }
+    
+       
+    const multiply = (a, b) => a * b;
+    
+    function multiply_inputs()
+    {
+      let inputs = return_inputs();
+      
+      document.getElementById("output").innerHTML = multiply(inputs[0], inputs[1]);
+    }
+    
+
+
+    function return_inputs()
+    {
+      
+      let a = Number(document.getElementById("input1").value);
+      let b = Number(document.getElementById("input2").value);
+      return [a, b];
+    }
+    
+    function subtract(a, b)
+    {
+      return a - b;
+    }
+
+    function divide(a, b)
+    {
+      return (a / b).toFixed(2);
+    }
+    
+    function do_math(math_function)
+    {
+      let inputs = return_inputs();
+      let result = math_function(inputs[0], inputs[1]);
+      document.getElementById("output").innerHTML = result;
+    }
+    
+  </script>
+</head>
+<body>
+
+  <h2>Requirement 02</h2>
+  <input type="number" id="input" placeholder="enter a number">
+
+  <!-- this button to sum all the numbers up to the number provided.-->
+  <button onclick="add_nums(document.getElementById('input').value);">add numbers</button>
+  <div id="outputSum"></div>
+
+  
+  <br>
+  <br>
+  
+  <h2>Calculator - Adding machine</h2>
+  <input type="number" id="input1" placeholder="enter a number">
+  <input type="number" id="input2" placeholder="enter a number">
+  
+  <!-- Calculator - Adding a plus button, minus button, multiply,and divide button respectively to the calculator. -->
+  <button onclick="do_math(add);"> + </button>
+  <button onclick="do_math(subtract);"> - </button>
+  <button onclick="do_math(multiply);"> * </button>
+  <button onclick="do_math(divide);"> / </button>
+  
+    
+  <h2> Output </h2>
+  <! -- Output the result to the div. When button is pressed it reads also the number from the input.-->
+  <div id="output"></div>
+  
+   
+  
+</body>
+</html>
