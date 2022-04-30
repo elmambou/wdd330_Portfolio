@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 02 | Portfolio Home Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    
+    <main>
+        <h2>WDD 330: Portfolio Week 2</h2><br>
+        
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li> <a href="group4_activity_w02.html">Team Activity</a></li>
+            <li><a href="#question">Questions</a></li>
+        </ul>
+         
+        <h3 id="note">My Notes:</h3>
+        <p> The JavaScript is often referred to as the language of the web, and most of web browsers can run JavaScript.
+            The most common JavaScript engines are found in browsers such as Firefox, Chrome or Safari. JavaScript is also a dynamic language. </p>
+        
+         <ul>
+              <li>For this week's readings, I have enjoyed the functions.</li>
+              <li>Callbacks: A callback is a function passed as an argument to another function.</li>
+              <li> This technique allows a function to call another function</li>
+              <li> A callback function can run after another function has finished</li>
+              
+              <li>
+                <p class="example">Example of callback:</p>
+                <img src="images/callback.png" alt="callback example">
+              </li>
+         </ul>
+        
+        <p> Programming Basics - Things to consider</p>
+          <ul>
+              <li>Well commented codes.</li>
+              <li>JavaScript Grammar</li>
+              <li>Declaring and assigning constants and variables.</li>
+              <li>Number Methods</li>
+          </ul>
+       
+        <p> When writing your codes it is good practice to use functions for the following reasons:</p>
+          <ul>
+              <li>To improve the readability of code.</li>
+              <li>To improve the reusability of the code, the same function can be used in any program rather than writing the same code from scratch.</li>
+              <li>Using functions make debugging of the code easy, and errors are easy to be traced.</li>
+          </ul>
+
+        <p> In JavaScript there are two types of comment:</p>
+          <ul>
+            <li>Single line comments starting with <mark>//</mark> and finishing at the end of the line. Example: // <em>this is a comment.</em></li>
+            <li>Multi-line comments starting with <mark>/*</mark> and finishing with <mark>*/</mark>. Example: /* <em>This is a longer comment anything here will be ignored. This is a useful place to put notes</em>*/ </li>
+          </ul>
+       
+        <p> JavaScript uses the keywords <strong>const</strong> and <strong>let</strong> to declare variables. <br>
+           The keyword <strong>const</strong> is used when the variable will not be reassigned to another value, whereas <strong>let</strong> is used if the variable might be reassigned later in the program.</p>
+          <ul>
+            <li>const name = <b>'Alexa'</b>; // <em>This won't be assigned to another string.</em></li>
+            <li>You can even declare and assign multiple variables at the same time if you separate them with commas,for example (let x = 3, y = 4, z = 5;)</li>
+          </ul><br>
+        
+        <p>There are two types of scope in JavaScript such as:</p>
+        <ul>
+           <li> <em>Global scope</em> — Global scope contains any variable defined outside of a block. 
+             A code block simply consists of grouped statements inside curly braces ({ }). if statement, loops, function are examples of structures that create a code block. <br>
+             A global variable has global scope. A global variable is accessible from anywhere in the code.</li><br>
+           <li> <em>Local Scope </em> — Local scope contains any variable defined inside code blocks. A local variable has local scope. A local variable is only accessible where it’s declared.</li>
+        </ul> <br>
+    
+    
+        <p> The two most commonly used functions are function declaration and function expression<br>
+            Function declaration example:<br>
+                 function hello(){ console.log('Hello World!');} <br><br>
+
+            Function expression example: <br>
+                const goodbye = function(){ console.log('Goodbye World!'); };
+        </p><br>
+
+        <p> Also, there is a new syntax for declaring functions called <strong>arrow syntax</strong>. These make declaring functions much more succinct by using less verbose syntax.
+            Arrow functions can be identified by the 'arrow' symbol,<mark> => </mark> that gives them their name</p><br>
+    
+        <h3 id="quiz">Week 02 Team Activity and Ninja Quiz Practice</h3><br>
+        <p> <em>Below are our group 4 team activity for this week, and my personal practice respectively</em> : </p>
+        <ul>
+            <li><a href= "group4_activity_w02.html">Week 02 Team Activity</a></li><br>
+            <li> <a href="quiz/index.html">Personal Practice - Quiz Ninja Project</a></li>
+
+        </ul>
+        <br>
+            <h3 id="question">Questions:</h3>
+            <p> Function declaration vs. Function expressions. <br>
+                What is the main difference between a function declaration and a function expression?<br>
+                What is a Callback in JavaScript and a Callback in real Life? <br>
+                How many types of callback functions are there?<br>
+                What is a WeakSet in JavaScript?</p>
+     
+    </main>
+    <footer>
+          &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+         <a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+         <p id="update">       </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
+
