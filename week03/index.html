@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 03 | Portfolio Week 3</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    
+    <main>
+        <h2 id="main-h1">WDD 330: Portfolio Week 3</h2><br>
+        
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li><a href="w03_teamActivity_part1.html"> Team Activity Part 1 & Stretch Goals (Exercices 6-8)</a></li>
+            <li><a href="w03_teamActivity_part2.html"> Array Cardio Day 2</a></li>
+            <li><a href="#question">Questions</a></li>
+        </ul>
+         
+        <h2 id="note">My Notes:</h2>
+        
+      <h3> OBJECT - What is an Object </h3>
+   <p>An object in JavaScript is a self-contained set of related values and functions. 
+     They act as a collection of named properties that map to any JavaScript value such as strings, numbers, booleans, arrays, and functions. 
+     If a property’s value is a function, it is known as a method.</p>
+      
+      <h3>Object Literals:</h3>
+      <ul>
+        <li>
+          <p>An object literal is an object that is created directly by wrapping all its properties and methods in curly braces { }<br>
+            An object literal is created by simply enter a pair of curly braces.
+            example: <strong>const name = {};</strong></p></li>
+        <li>
+          <p class="example">Example of object literal:</p>
+          <img src="images/object_literal.JPG" alt="Object Literal example">
+        </li>
+   </ul>
+
+      <h3>Checking if Properties or Methods Exist</h3>
+      <p>This is done by using the "in" operator, "!== undefined" or "hasOwnProperty() method:</p>
+      <ul>
+        <li>
+        <p class="example">Example of how to check the existence of properties or methods:</p>
+        <img src="images/checking_method.JPG" alt="Checking the existence of properties or methods">
+        </li>
+      </ul>
+
+      <h3>Removing properties</h3>
+      <p>This is done by using using the "delete" operator.</p>
+      <ul>
+        <li>
+        <p class="example">This is how any property is removed from an object.</p>
+        <img src="images/delete_operator.JPG" alt="Removing Properties">
+        </li>
+      </ul>
+
+
+      <h3>The Math Object:</h3>
+    <p>The Math object is a built-in object that has several properties representing mathematical constants, 
+      as well as methods that carry out a number of common mathematical operations.<br>
+
+  All the properties and methods of the Math object are immutable and unable to be changed.
+  The Math object also has several methods to carry out a variety of useful mathematical operations.</p>
+
+     <h3>Rounding Methods:</h3>
+   <ul>
+     <li>
+       <p>The <strong>Math.ceil()</strong> method will round a number up to the next integer, or remain the same if it is already an integer</p>
+       <img src="images/math_ceil.JPG" alt="Math Ceil method">
+     </li>
+
+     <li>
+       <p>The <strong>Math.floor()</strong> method will round a number down to the next integer, or remain the same if it is already an integer</p>
+       <img src="images/math_floor.JPG" alt="Math Floor method">
+     </li>
+     
+       <li>
+         <p>The <strong>Math.round()</strong> method will round a number to the nearest integer</p>
+         <img src="images/math_round.JPG" alt="Math Round method">
+       </li>
+    </ul>
+
+      <h3> Absolute Values:</h3> 
+      <p>The <strong>Math.abs()</strong> method returns the absolute value of a number. So if the number is positive, 
+        it will remain the same, and if it’s negative, it will become positive</p>
+        <img src="images/absolute_value.JPG" alt="Absolute Values">
+      
+      <h3>Powers and Roots:</h3>
+      <ul>
+        <li>The <strong>Math.exp()</strong> method will raise a number to the power of Euler’s constant</li>
+        <li>The <strong>Math.pow()</strong> method will raise any number (1st argument) to the power of another number (2nd argument)</li>
+        <li>The <strong>Math.sqrt()</strong> method returns the positive square root of a number</li>
+      </ul>
+
+      <h3>Logarithmic Methods:</h3>
+      <p>The <strong>Math.log()</strong> method returns the natural logarithm of a number</p>
+          <img src="images/logarithmic_methods.JPG" alt="Logarithmic Method">
+      
+      <h3>Maximum & Minimum Methods:</h3>
+      <ul>
+        <li>The <strong>Math.max()</strong> method returns the maximum number from its arguments</li>
+        <li>The <strong>Math.min()</strong> method unsurprisingly returns the minimum number from the given arguments</li>
+      </ul>
+      
+      <h3>Trigonometric Functions:</h3>
+        <ul>
+          <li>The <strong>Math.sin()</strong> returns the sine of an angle</li>
+          <li>The <strong>Math.cos()</strong> returns the cosine of an angle </li>
+          <li>The <strong>Math.tan()</strong> returns the tangent of an angle</li>
+          <li>The <strong>Math.asin()</strong> returns the arcsine of a number. The result is an angle</li>
+        </ul>
+
+        <h3>THE DOCUMENT OBJECT MODEL - What is the DOM?</h3>
+        <ul>
+        <p>The DOM represents an HTML document as a network of connected nodes that form a tree-like structure.</p>
+        <p>The HTML tag is the root node, and every other part of the document is a child node of this.</p>
+         <li>
+          <p class="example">Example of a DOM tree</p>
+          <img src="images/Dom_tree.JPG" alt="DOM Tree">
+          </li>
+        </ul>
+      
+        <h3>Map, Filter and Reduce:</h3>
+      <h3>Map: </h3>
+      <p>The <strong>map()</strong> method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.</p>
+
+      <h3>Filter:</h3>
+      <p>The <strong>filter()</strong> method takes each element in an array and it applies a conditional statement against it. 
+        If this conditional returns true, the element gets pushed to the output array. 
+        If the condition returns false, the element does not get pushed to the output array.</p>
+
+      <h3>Reduce:</h3>
+      <p>The <strong>reduce()</strong> method reduces an array of values down to just one value.
+        To get the output value, it runs a reducer function on each element of the array.</p>
+
+      <h3>EVENTS - TYPES OF EVENTS:</h3>
+       <ul>
+        <li>
+          <p>The <strong>Mouse Events.</strong> There are also the <strong>mousedown</strong>, and the <strong>mouseup</strong>events.</p>
+          <img src="images/mouse_events.JPG" alt="The Mouse Events">
+        </li>
+     
+        <li>
+          <p>The <strong>Keyboard Events.</strong> These events trigger three events when a user presses a key.</p>
+          <img src="images/keydown.JPG" alt="Keydown event">
+          <img src="images/keyup.JPG" alt="Keyup event">
+          <img src="images/keyPress.JPG" alt="Keypress event">
+        </li>
+        
+        <li>
+          <p> The <strong>Event Listeners</strong>: How to use an event listener</p>
+          <img src="images/eventListeners.JPG" alt="About event listeners">
+        </li>
+       </ul>
+
+       <br>
+       <br>
+
+        <h3 id="question">QUESTIONS:</h3>
+        <ol>
+          <li>When can we exactly use the map() and filter() method?</li>
+          <li> When using the sort method, why do we use 1 to return true and -1 to return false instead of 0?</li> 
+        </ol> <br><br>
+     
+    </main>
+    <footer>
+      &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+     <a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+     <p id="update">       </p>
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>
