@@ -1,6 +1,7 @@
 const links = [
   { label: 'Week 1', url: 'week01/index.html' },
-  { label: 'Week 2', url: 'week02/index.html' }
+  { label: 'Week 2', url: 'week02/index.html' },
+  { label: 'Week 3', url: 'week03/index.html' }
 ];
 
 const ol = document.getElementById('assignments');   
