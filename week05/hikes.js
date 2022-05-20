@@ -36,7 +36,7 @@ const hikeList = [
     }
   ];
   
-  //const imgBasePath = '//byui-cit.github.io/cit261/examples/';
+  //on load grab the array and insert it into the page on load
  const imgBasePath = '//elmambou.github.io/wdd330_Portfolio/week05/examples/';
   
   export default class Hikes {
