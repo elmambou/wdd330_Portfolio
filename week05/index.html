@@ -1,20 +1,198 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Great Hikes (dynamic DOM example)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 05 | Portfolio Home Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    
     <main>
-      <h1>Great hikes</h1>
-      <ul id="hikes" class="hikeStyles">
-        <!-- your hike list should be build here. -->
-      </ul>
-    </main>
+        <h2 id="main-h1">WDD 330: Portfolio Week 4</h2><br>
+        
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li><a href="w05_teamActivity.html"> Week 05 Team Activity</a></li>
+            <li><a href="#quiz"> Ninja Quiz</a></li>
+            <li><a href="#question">Questions</a></li>
+        </ul>
+         
+        <h2 id="note">My Notes:</h2>
+        <p>Forms are very common means of interacting with a web page<br>
+        
+            <h3>How to access Form Elements</h3>
+        <ul>
+        <li>
+          <p>The <strong>document.forms[]</strong> property uses index notation to return the first form object</p>
+          <img src="images/docForm.JPG" alt="Document Form property">
+        </li>
+   
+        <li>
+          <p>The <strong>document.getElementsByTagname()</strong> returns a live node list of all the elements with the tag name that is provided as an argument</p>
+          <img src="images/docFormElements.JPG" alt="Form elements">
+          <img src="images/getElementsBy.JPG" alt="Get Elements By Their Tag Name">
+        </li>
+        
+        <li>
+            <p>The <strong>Search method;</strong> uses the name attribute to identify a form</p>
+            <img src="images/docSearchBrackets.JPG" alt="Using square bracket notation">
+        </li>
 
-    <script src="js/hiking-start.js" type="module"></script>
-  </body>
+        <li>
+            <p>The <strong>SearchInput method </strong> is used to access the form controls through their name attributes.</p>
+            <img src="images/searchInput.JPG" alt="Searching Input">
+        </li>
+       </ul>
+
+        <h3>Form Properties and Methods:</h3>
+       <ul> 
+         <li>
+         <p> The <strong>form.submit()</strong>method will submit the form automatically<br>
+             &quot;&lt;button type='submit'&gt;Submit&lt;/button&gt;<br>
+             &lt;input type='submit' value='Submit'&gt;<br>
+             &lt;input type='image' src='button.png'&gt;&quot;</p>
+         </li>
+  
+          <li>
+            <p>The <strong>form.reset()</strong> method will reset all the form controls back to their initial values specified in the HTML.<br>
+                Example:  &lt;button type='reset'&gt;Reset&lt;/button&gt;</p>
+          </li>
+
+          <li>
+            <p>The <strong>form.action</strong> property can be used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server.<br>
+                Example:  form.action = '/an/other.url'</p>
+          </li>
+        </ul>
+ 
+
+        <h3>Form Events:</h3>
+        <ul>
+            <li>
+                <p>The <strong>focus</strong> event occurs when an element is focused on.<br>
+                 &quot; input.addEventListener('focus', () => alert('focused'), false)&quot;</p>
+            </li>
+            
+            <li>
+                <p>The <strong>blur</strong> event occurs when the user moves the focus away from the form element.<br>
+                &quot;input.addEventListener('blur', () => alert('blurredd'), false);&quot; </p>
+            </li>
+
+            <li>
+                <p>The <strong>change</strong> event occurs when the user moves the focus away from the form element after changing it.<br>
+                &quot;input.addEventListener('change', () => alert('changed'), false);&quot;</p>
+            </li>
+        </ul>
+
+        <h3>The <strong>submit</strong>event occurrence</h3>
+        <ul>
+            <li>
+              <p>The most important form event is the <strong>submit</strong> event, occurring when the form is submitted.</p>
+              <img src="images/submitEvent.JPG" alt="Submitting a Form">
+            </li>
+        </ul>
+
+             <p>From the above example, we can stop the form from being submitted to the URL by using the <strong>preventDefault()</strong> method</p>
+
+        <h3>Form Controls:</h3>
+        <p>Common types of form control are:</p>    
+        <ul>
+          <li>
+            <p><strong>&lt;input&gt;</strong>fields, including 'text', 'passwords', 'checkboxes', 'radio buttons', and 'file uploads' types</p>
+          </li>
+
+           <li>
+             <p> &quot;&lt;input type='text'&gt; which is used for entering a short piece of text, such as a username&quot;</p>
+            </li>
+           <li>
+            <p> &quot;&lt;input type='password'&gt; which is  used to enter passwords or secret information&quot;</p>
+           </li>
+        </ul>
+        
+        <h3>Object-Oriented Programming in JavaScript:</h3>
+        <p>Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects that have properties and methods. 
+         It is used to model representations of objects in the real world.It has the benefit of keeping related pieces of code encapsulated in objects that maintain state throughout the life of the program.</p>
+        <p><b>There are three main concepts in OOP</b></p>
+         <ol>
+            <li><strong>Encapsulation:</strong>With Encapsulation, the inner workings are kept hidden inside the object and only the essential functionalities are exposed to the end user, such as the 'on' button.</li>
+            <li><strong>Polymorphism:</strong>means that the same process can be used for different objects.</li>
+            <li><strong>Inheritance:</strong>means we can take an object that already exists and inherit all its properties and methods</li><br>
+            
+        </ul>
+         <p>JavaScript contains a number of built-in constructor functions such as Object, Array, and Function that can be used to create objects, arrays and functions instead of literals.<br>
+            <img src="images/constObjects.JPG" alt="Built-In constructors">  <br>
+
+         <p>All objects have a constructor property that returns the constructor function that created it.<br>
+            <img src="images/literalObjects.JPG" alt="Object Constructors">  <br>
+
+        <h3>Prototype Inheritance</h3>
+        <ul>
+            <li>
+                <p>Example of a prototypal inheritance model</p>
+                <img src="images/prototypeInheritance.JPG" alt="Prototype Inheritance Model"> 
+
+            </li>
+        </ul>
+              
+
+              <h3>What Should the Prototype Be Used For?</h3>
+        <p>The prototype can be used to add any new properties and methods after the class has been declared. 
+          It should be used to define any properties that will remain the same for every instance of the class. </p>
+
+        <h3>Getting and Setting Property Descriptors</h3>
+              <p>The <strong>Object()</strong>constructor function has a number of methods for getting and defining property descriptors. 
+                  We can see these values using the <strong>Object.getOwnPropertyDescriptor()</strong>method
+
+              <p>Every time a new object is created using the<strong>Object.create()</strong>method, 
+                  the new object inherits all the properties and methods from the parent object, which becomes the new object’s prototype</p>
+
+              <h3>Modular JavaScript:</h3>
+        <p>A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. 
+           This helps to keep code organized in separate, reusable files, which improves code maintainability.</p>
+
+        There are a few important points about modules that are worth keeping in mind:
+
+          <ul>
+            <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt-out of this.</li>
+              <li>A module has its own global scope, so any variables created in the top level of a module can only be accessed within that module.</li>
+              <li>The value of "this" in the top level of a module is undefined, rather than the global object.</li>
+              <li>You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).</li>
+         </ul>
+        <p>Other practical resource with more info:</p>
+         <ul>
+         <li class="video"><span class="subtitle">Composition over inheritance:</span>
+            <p>The following video shows how to use composition</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fbpXQ0e8Mp8" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </li>
+        </ul>
+        <h2 id="quiz">Team Activity & Ninja Quiz Practice</h2>
+    <p> Click in the links below to find this week team activity and practice exercise.</p>
+       <a href="quiz/index.html">Quiz ninja start</a><br>
+       <a href="w05_teamActivity.html"> Week 05 Team Activity</a>
+
+    <h2 id="question">Question:</h2>
+    <ol>
+        <li>What is function overloading in JavaScript?</li>
+        <li> Should static method only be used when working with classes?</li>
+    </ol><br><br>
+
+     
+    </main>
+    <footer>
+        &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+        <a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+        <p id="update">       </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
 </html>
