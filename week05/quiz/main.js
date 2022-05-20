@@ -19,8 +19,7 @@ return Math.floor((b-a+1) * Math.random()) + a;
 function shuffle(array) {
 for (let i = array.length; i; i--) {
 let j = random(i)-1;
-[array[i - 1], array[j]] = [array[j], array[i - 1]];
-}
+[array[i - 1], array[j]] = [array[j], array[i - 1]];}
 }
 
 // View Object
@@ -34,8 +33,7 @@ response: document.querySelector('#response'),
 timer: document.querySelector('#timer strong'),
 render(target,content,attributes) {
 for(const key in attributes) {
-target.setAttribute(key, attributes[key]);
-}
+target.setAttribute(key, attributes[key]);}
 target.innerHTML = content;
 },
 show(element){
@@ -59,8 +57,7 @@ this.hide(this.response);
 this.show(this.start);
 },
 buttons(array){
-return array.map(value => `<button>${value}</button>`).join('');
-}
+return array.map(value => `<button>${value}</button>`).join('');}
 };
 
 const game = {
@@ -71,14 +68,12 @@ this.questions = [...quiz];
 view.setup();
 this.secondsRemaining = 20;
 this.timer = setInterval( this.countdown , 1000 );
-this.ask();
-},
+this.ask();},
 countdown() {
 game.secondsRemaining--;
 view.render(view.timer,game.secondsRemaining);
 if(game.secondsRemaining <= 0) {
-game.gameOver();
-}
+game.gameOver();}
 },
 ask(name){
 console.log('ask() invoked');
@@ -89,11 +84,9 @@ const options = [this.questions[0].realName, this.questions[1].realName, this.qu
 shuffle(options);
 const question = `What is ${this.question.name}'s real name?`;
 view.render(view.question,question);
-view.render(view.response,view.buttons(options));
-}
+view.render(view.response,view.buttons(options));}
 else {
-this.gameOver();
-}
+this.gameOver();}
 },
 check(event){
 console.log('check(event) invoked');
@@ -112,8 +105,7 @@ gameOver(){
 console.log('gameOver() invoked');
 view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
 view.teardown();
-clearInterval(this.timer);
-}
+clearInterval(this.timer);}
 }
 
 view.start.addEventListener('click', () => game.start(quiz), false);
