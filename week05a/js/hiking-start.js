@@ -2,7 +2,7 @@
 
 //create an array of hikes
 
-fetch('http://127.0.0.1:5500/data/hikes.json').then(function(response) {
+fetch('http://./data/hikes.json').then(function(response) {
     return response.json();
 }).then(function(data) {
     const hikeList = data.items;
