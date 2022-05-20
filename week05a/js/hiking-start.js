@@ -12,7 +12,7 @@ fetch('http://127.0.0.1:5500/data/hikes.json').then(function(response) {
     hikes.showHikeList(hikeList);
 });
 
-const imgBasePath = "//byui-cit.github.io/cit261/examples/";
+ const imgBasePath = '//elmambou.github.io/wdd330_Portfolio/week05a/examples/';
 //on load grab the array and insert it into the page on load
 
 export default class Hikes {
