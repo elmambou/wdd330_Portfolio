@@ -7,6 +7,9 @@ body {
   img {
     max-width: 100%;
   }
+  .hidden {
+    display: none;
+  }
 
 main h1 {
   text-align: center;
