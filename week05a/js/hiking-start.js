@@ -2,7 +2,7 @@
 
 //create an array of hikes
 
-fetch('https://elmambou.github.io/wdd330_Portfolio/week05a/data/hikes.json').then(function(response) {
+fetch('//elmambou.github.io/wdd330_Portfolio/week05a/data/hikes.json').then(function(response) {
     return response.json();
 }).then(function(data) {
     const hikeList = data.items;
