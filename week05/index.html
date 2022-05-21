@@ -10,358 +10,148 @@
 </head>
 
 <body>
-  
+
     <header>
         <h1 id="header-title">Elie Silvere Mambou</h1>
     </header>
     
     <main>
-        <h2 id="main-h1">WDD 330: Portfolio Week 5</h2><br>
-        
+        <h2 id="main-h1">WDD 330: Portfolio Week 5</h2>        
         <ul>
             <li><a href="#note"> My Notes</a></li>
             <li><a href="w05_teamActivity.html"> Week 05 Team Activity</a></li>
             <li><a href="#quiz"> Ninja Quiz</a></li>
             <li><a href="#question">Questions</a></li>
         </ul>
-         
+
         <h2 id="note">My Notes: Chapter 10: Testing and Debugging</h2>
-        <p>Forms are very common means of interacting with a web page<br>
+        <p>Debugging and testing, tools and tips <br>
         
-            <h3>How to access Form Elements</h3>
+            <h3>The Importance of Testing and Debugging</h3>
+        
+          <p>I learned how important it is to test and debug errors with JavaScript. I also found that as a programmer, 
+             I should make sure that the code I write responds and that if there is any error, it can be identified and fixed quickly. 
+             Therefore, I need to be aware of the exceptions, if possibly catch and fix them.  
+             Failing to do so makes errors difficult to track down. </p>
         <ul>
         <li>
-          <p>The <strong>document.forms[]</strong> property uses index notation to return the first form object</p>
-          <img src="images/docForm.JPG" alt="Document Form property">
+          <p>Strict Mode</p>
+          <img src="images/invoking_function.JPG" alt="Strict Mode">
+          <p> Since it’s much better to spot errors early on, rather than have them cause problems later. 
+              Writing code in strict mode can also help improve its clarity and speed.</p>
+          <p>The recommended way to invoke strict mode is to place all your code into a self-invoking function:</p>
         </li>
+
+
    
-         <p>one of the following causes errors:</p>
-        <ul>
-         <li>System error ― there’s a problem with the system or external devices with which the program is interacting.</li>
-         <li>Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</li>
-          <li>User error ― the user has entered data incorrectly, which the program is unable to handle.</li>
-        </ul>
-        <p>As programmers, we should be aware of errors that have little influence over how external systems work. 
-            It is our responsibility, so we must ensure they are minimized as much as possible and fixed promptly. 
-            We also should try to limit user errors by predicting any possible interactions that may throw an error, 
-            and ensure they are dealt with in a way that doesn’t negatively affect the user experience.</p>
-
-        <h3>Exceptions</h3>
-        <p>An exception is an error that produces a return value that can then be used by the program to deal with the error. 
-            For example, trying to call a method that is nonexistent will result in a reference error that raises an exception.</p>
-          <pre>unicorn();
-          &lt;&lt; ReferenceError: unicorn is not defined</pre>
-        <p>An exception will also produce as <stron>tack trace</strong>. This is a sequence of functions or method calls that lead to the point where the error occurred. 
-            The example below shows how a stack trace can help you find where an error originates from:</p>
-         <pre> 
-        function three(){ unicorn(); }
-        function two(){ three(); }
-        function one(){ two(); }
-        one();
-
-        &lt;&lt; index.html:13 Uncaught ReferenceError: unicorn is not defined
-          at three (index.html:13)
-          at two (index.html:17)
-          at one (index.html:21)
-          at index.html:24`
-        </pre>
-          <h3>Warnings</h3>
-        <p>A warning can occur if there’s an error in the code that isn't enough to cause the program to crash. 
-            This means the program will continue to run after a warning. This might sound good, but it can be problematic, 
-            since the issue that produced the warning may cause the program to continue running incorrectly.</p>
-        <pre>
-        pi = 3.142;
-        &lt;&lt; JavaScript Warning: assignment to an undeclared variable
-        </pre>
-        <p>Warnings and exceptions are presented differently in various environments. 
-            Some browsers will show a small icon in the corner of the browser window to indicate that an exception or warning has occurred. 
-            Others require the console to be open to see any warnings or exceptions.</p>
-
-        <h3>The Importance of Testing and Debugging</h3>
-        <p><strong>One should ensure that the code they write fails loudly in development so any errors can be identified and fixed quickly. 
-         In production, a programmer should try to make the code fail gracefully (although not completely silently ― we still need to know there’s an error), 
-            so the user experience is not affected, if possible. This is achieved by making sure exceptions are caught and dealt with, and code is tested rigorously.</strong></p>
-
-        <h3>Strict Mode</h3>
-        <p>One method used to produce more exceptions and warnings and prohibits the use of some deprecated features is called <strong><em>Strict Mode</em></strong>.<br>
-        Not using strict mode is often referred to as 'sloppy mode' as it’s forgiving of sloppy programming practices. 
-         Strict mode encourages a better quality of JavaScript to be written that befits a ninja programmer, so its use is recommended.<br>
-        One needs to simply enter the following string line in a javascript file to enter strict mode:</p>
-        <pre> 'use strict';</pre>
-        <p>This will be picked up by any JavaScript engine that uses strict mode. If the engine does not support strict mode, this string will simply be ignored.<br>
-            By assigning a value to a variable that is undeclared in strict mode, we get an exception, instead of a warning
-        </p>
-        <pre>
-         'use strict';
-
-        e = 2.718;
-        &lt;&lt; ReferenceError: e is not defined // <-- exception received
-        </pre>
-        <p>strict mode on a per-function basis by adding the line inside a function. Strict mode will then only be applied to anything inside that function:</p>
-        <pre>
-        function strictly(){
-            'use strict';       // <--
-            // function code goes here
-        </pre>
-        <p>the recommended way to invoke strict mode is to place all your code into a self-invoking function like so:</p>
-        <pre>
-        (function() {
-            'use strict';       // <--
-
-            // All your code would go inside this function
-
-            }());
-        </pre>
-
-        <h3>Feature Detection</h3>
-        <p>The recommended way to determine browser support for a feature is to use feature detection which is done by using an <strong>if statement</strong> 
-        to check whether an object or method exists before trying to actually call the method.<br>
-        In this example below, we want to use the shiny newholoDeckAPI that doesn't actually exist</p>
-        <pre>
-        if (window.holoDeck) {
-            virtualReality.activate();
-        }
-        </pre>
-        <h3> Debugging in the Browser</h3>
-        <p> Debugging is the process of finding and fixing errors within a script. This also allows tracing the code step by step to see what exactly is going on.<br>
-        It will be good to create what are known as breakpoints, which halt the progress of the code 
-        and allow us to view the value of different variables at that point in the program.</p>
-        <ul>
-        <li><strong>The Trusty Alert</strong> which is the most basic form of debugging that allows one to use the <strong>alert()</strong> 
-        method to show a dialog at certain points in the code.</li>
-        <li><strong>Using the Console</strong>:<ul>
-        <li>The<strong>console.log()</strong> method that can be used to log the value of variables at different stages of the program.</li>
-        <li>The <strong>console.trace()</strong>method will log an interactive stack trace in the console. 
-        This will show the functions that were called in the lead up to an exception occurring while the code is running</li></li></ul>
-        <li><strong>Debugging Tools</strong> which works by using the <strong>debugger</strong> command. For example:
-        <pre>
-        function hello(name) {
-            let phrase = `Hello, ${name}!`;
-
-            debugger; // <-- the debugger stops here
-
-        say(phrase);
-        }
-        </pre>
+        <li>
+          <p><strong>'use strict'</strong> To enter in strict mode, you will need to enter the following string line in a JavaScript file:</p>
         </li>
-
         </ul>
-        <h3> Error Objects</h3>
-        <p>An <strong>error object</strong> can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function, like so:</p>
-        <pre>
-        const error = new Error();
-        //This constructor function takes a parameter that’s used as the error message:
-        const error = new Error('Oops, something went wrong');
-        </pre>
-        <p> The seven other error objects used for specific errors:</p>
-        <ul>
-        <li><strong>Eval Error</strong> is not used in the current ECMAScript specification and only retained for backward compatibility. It was used to identify errors when using the global eval()function.</li>
-
-        <li><strong>Range Error</strong> is thrown when a number is outside an allowable range of values.</li>
-
-        <li><strong>Reference Error</strong> is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.</li>
-
-        <li><strong>Syntax Error </strong> is thrown when there’s an error in the code’s syntax.</li>
-
-        <li><strong>Type Error </strong> is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.</li>
-
-        <li><strong>URI Error </strong>is thrown when there’s a problem encoding or decoding the URI.</li>
-
-        <li> <strong>Internal Error</strong> is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.</li>
+        
+       <h3>Feature Detection</h3>
+       <ul> 
+         <li>
+         <p>The recommended way to determine browser support for a feature is to use feature detection.</p>
+        </li>
         </ul>
-        <pre>
-        //These error objects can also be used as constructors to create custom error objects:
-        const error = new TypeError('You need to use numbers in this function');
-        </pre>
-        <h3>Exception Handling</h3>
-        <p> We can handle exceptions by using the <strong>try</strong>,<strong>catch</strong>, and <strong>finally</strong><br>
-        If we suspect a piece of code will result in an exception, we can wrap it in a <strong>try</strong> block. 
-        This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a <strong>catch</strong> block</p>
-        <pre>
-        function imaginarySquareRoot(number) {
-            'use strict';
-            try {                                  //    <--- we put the try here
-                return String(squareRoot(number));
-            } catch(error) {                       //    <--- catch error below
-                return squareRoot(-number)+'i';
-            }
-            }
-        </pre>
-        <p>The code inside the <strong>catch</strong> block will only run if an exception is thrown inside the <strong>try</strong> block The error object is automatically passed as a parameter to the <strong>catch</strong> block. This allows us to query the error name, message and stack properties, and deal with it appropriately. In this case, we actually return a string representation of an imaginary number:</p>
-        <pre>
-        imaginarySquareRoot(-49) // no error message shown
-        &lt;&lt;'7i'
-        </pre>
-        <p>A <strong>finally</strong> block can be added after a <strong>catch</strong> block. This will always be executed after the <strong>try</strong> or <strong>catch</strong> block, regardless of whether an exception occurred or not. It is useful if you want some code to run in both cases. We can use this to modify the imaginarySquareRoot() function so that it adds "+ or -" to the answer before returning it:</p>
-        <pre>
-        function imaginarySquareRoot(number) {
-            'use strict';
-            let answer;
-            try {
-                answer = String(squareRoot(number));
-            } catch(error) {
-                answer = squareRoot(-number)+"i";
-            } finally {
-                return `+ or - ${answer}`;
-            }
-            }
-        </pre>
-        <h3>Tests</h3>
-        <p>Testing is an important part of programming that can often be overlooked<br>
-        A test can simply be a function that tests a piece of code runs as it should</p>
-        <pre>
-        function itSquareRoots4() {
-          return squareRoot(4) === 2;
-        }
-        </pre>
-        <p>Here we’re comparing the result of <strong>squareRoot(4)</strong> with the number 2. This will return <strong>true</strong> if our function works as expected, which it does:</p>
-        <pre>
-        itSquareRoots4();
-        &lt;&lt; true
-        </pre>
-        <h3>Test-driven Development</h3>
-        <p>Test-driven development(TDD) is the process of writing tests before any actual code. This process should be followed in small piecemeal chunks every time a new feature is implemented, resulting in the following workflow:</p>
-        <ol>
-        <li>Write tests (that initially fail)</li>
-        <li>Write code to pass the tests</li>
-        <li>Refactor the code</li>
-        <li>Test refactored code</li>
-        <li>Write more tests for new features</li>
-        </ol>
 
-        <h3>Jest</h3>
-        <p><em>Jest</em> is a TDD framework, created by Facebook, it has gained a lot of popularity recently.<br>
-        To use Jest, first, we need to install it using <strong>npm</strong> which installs Jest globally .Enter the following command in a terminal:</p>
-        <pre>
-        npm install -g jest
-        </pre>
-        <p> To check everything worked okay, try running the following command to check the version number that has been installed:</p>
-        <pre>
-        jest -v        //     <---- command entered to check the version of Jest
-        &lt;&lt; v19.0.2     //  <----- displays version number
-        </pre>
-
-        <p>We'll use our squareRoot() function from earlier works. You can create a file called <strong>squareRoot.test.js</strong> and add the following code:</p>
-        <pre>
-        function squareRoot(number) {
-          'use strict';
-          if (number < 0) {
-            throw new RangeError("You can't find the square root of negative numbers")
-        }  
-           return Math.sqrt(number);
-        };
-
-        test('square root of 4 is 2', () => {
-        expect(squareRoot(4)).toBe(2);
-        });
-        </pre>
-        <p>To run this test, simply navigate to the folder that contains the filesquareRoot.test.jsand enter the following command</p>
-        <pre>
-        jest -c {}  // <--- The-c {} flag at the end is shorthand for ‘configuration’.
-        </pre>
-        <p>If everything is working okay, it should produce the following output:</p>
-        <pre>
-        &lt;&lt; PASS ./squareRoot.test.js
-        ✓ square root of 4 is 2 (2ms)
-
-        Test Suites: 1 passed, 1 total
-        Tests: 1 passed, 1 total
-        Snapshots: 0 total
-        Time: 2.996s
-        </pre>
-        <h3>Crunching Some Numbers</h3>
-        <p>Since we’re doing TDD, we'll start by writing the tests first, so create a file called numberCruncher.test.js and add the following code:</p>
-        <pre>
-        test('factors of 12', () => {
-          expect(factorsOf(12)).toEqual([1,2,3,4,6,12]);
-        });
-        </pre>
-        <p>This test says our factorsOf() function should return an array containing all the factors of 12 in order, when 12 is provided as an argument. If we run this test, we can see that it fails spectacularly:</p>
-        <pre>
-        jest -c {}
-        << FAIL ./numberCruncher.test.js
-        ● factors of 12
-
-              ReferenceError: factorsOf is not defined
-
-              at Object.<anonymous>.test (numberCruncher.test.js:2:10)
-              at process._tickCallback (internal/process/next_tick.js:103:7)
-
-        ✕ factors of 12 (6ms)
-
-        Test Suites: 1 failed, 1 total
-        Tests: 1 failed, 1 total
-        Snapshots: 0 total
-        Time: 1.424s
-        </pre>
-        <p>Well, what did you expect? We haven't written any code yet! Let’s have a go at writing the factorsOf() function. Add the following to the top of the numberCruncher.test.js file, such as:</p>
-        <pre>
-        'use strict';
-
-        function factorsOf(n) {
-          const factors = [];
-          for (let i=1; i < n ; i++) {
-            if (n/i === Math.floor(n/i)){
-            factors.push(i);
-            }
-          }
-          return factors;
-        }
-        </pre>
-        <p>Try running the test again:</p>
-        <pre>
-        jest -c {}
-        << FAIL ./numberCruncher.test.js
-        ● factors of 12
-
-              expect(received).toBe(expected)
-
-              Expected value to be (using ===):
-              [1, 2, 3, 4, 6, 12]
-              Received:
-              [1, 2, 3, 4, 6]
-
-              Difference:
-
-              - Expected
-              + Received
-
-              @@ -2,7 +2,6 @@
-              1,
-              2,
-              3,
-              4,
-              6,
-              - 12,
-              ]
-
-              at Object.<anonymous>.test (numberCruncher.test.js:14:25)
-              at process._tickCallback (internal/process/next_tick.js:103:7)
-
-        ✕ factors of 12 (12ms)
-
-        Test Suites:   1 failed, 1 total
-        Tests:         1 failed, 1 total
-        Snapshots:     0 total
-        Time:          0.801s, estimated 1s
-        Ran all test suites.
-        </pre>
-        <p> As we can see our test still fails. To view the solution on our to solve the test, go to <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10/k01nwuv8" alt="Sitepoint"> Sitepoint Section 10</a></p>
-
-     
-      
-    <h2 id="quiz">Ninja Quiz Practice</h2>
-    <p> In the link below you will go to our practice link </p>
-       <a href="quiz/">Quiz ninja start</a>
-
-            <h2 id="question">Question:</h2>
-            <p>In the reading for this week, the book spoke about quite a lot to digest at this point, what is one of the best way to handle errors or debugging that works best 
-            in the field of work for those with much experience?</p>
-            <p> Where can we have some BYUI videos that could explain a little bit more on the topics we are learning to advance our knowledge than relying alone on reading books which for some of us
-            are not so strong with?</p>
+        <h3>Debugging in the Browser</h3>
+        <p>Debugging is the process of finding out where bugs occur in the code and then dealing with them.</p>
             
+        <ul> 
+         <li>
+          <p><strong>Alert()</strong> method is the most basic form of debugging.</p>
+          <p>The example below checks to see if a person’s age is appropriate:</p> 
+            <img src="images/alert.JPG" alt="The Trusty Alert">
+         </li>
 
-     
+         <li>
+            <p><strong>ifBlock</strong> is used to see the correct value of the <strong>age</strong> variable, 
+                the alert method has to be inside the if block.method is the most basic form of debugging.</p>
+            <p>To check for equality, we should use <strong>===</strong> instead of <strong>= </strong>which assigns 
+                a value to a variable (eveninside an if block).</p>
+            <p>For all values of <strong>age</strong> that are <strong>less than</strong> 12, we could update the code as follows:</p>
+              <img src="images/ifBlock.JPG" alt="If block method">
+         </li>
+         </ul>
+        
+        <h3>Debugging Tool</h3>
+        <p>One of the most useful commands is the <strong>debugger</strong> keyword.</p>
+        <img src="images/debuggingtool.JPG" alt=" Using a Console">
+
+
+        <h3>Using the Console</h3>
+        <ul>
+            <li>
+                <p> A <strong>console</strong> object does provide a number of methods for logging information and debugging.</p>
+                <p>Example of <strong>console</strong> with the <strong>age</strong> variable</p>
+                <img src="images/console.JPG" alt=" Using a Console">
+            </li>
+        </ul>
+
+        <h3> Error Objects</h3>
+             <p>An <strong>error object</strong> can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function, like so:</p>
+             <pre>
+             const error = new Error();
+             //This constructor function takes a parameter that’s used as the error message:
+             const error = new Error('Oops, something went wrong');
+             </pre>
+             <p> The seven other error objects used for specific errors:</p>
+             <ul>
+             <li><strong>Eval Error</strong> is not used in the current ECMAScript specification and only retained for backward compatibility. It was used to identify errors when using the global eval()function.</li>
+             
+             <li><strong>Range Error</strong> is thrown when a number is outside an allowable range of values.</li>
+             
+             <li><strong>Reference Error</strong> is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.</li>
+             
+             <li><strong>Syntax Error </strong> is thrown when there’s an error in the code’s syntax.</li>
+             
+             <li><strong>Type Error </strong> is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.</li>
+             
+             <li><strong>URI Error </strong>is thrown when there’s a problem encoding or decoding the URI.</li>
+             
+             <li> <strong>Internal Error</strong> is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.</li>
+             </ul>
+             <pre>
+             //These error objects can also be used as constructors to create custom error objects:
+             const error = new TypeError('You need to use numbers in this function');
+             </pre>
+
+             <h3>Exception Handling</h3>
+             <p> We can handle exceptions by using the <strong>try</strong>,<strong>catch</strong>, and <strong>finally</strong><br>
+             If we suspect a piece of code will result in an exception, we can wrap it in a <strong>try</strong> block. 
+             This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a <strong>catch</strong> block</p>
+             <pre>
+             function imaginarySquareRoot(number) {
+                 'use strict';
+                 try {                                  //    <--- we put the try here
+                     return String(squareRoot(number));
+                 } catch(error) {                       //    <--- catch error below
+                     return squareRoot(-number)+'i';
+                 }
+                 }
+             </pre>
+        <h3>Other practical resource with more info:</h3>
+         <ul>
+         <li class="video"><span class="subtitle">Testing in JavaScript:</span>
+            <p>How to test better in JavaScript</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H0XScE08hy8" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </li>
+        </ul>
+        <h3 id="quiz">Team Activity & Ninja Quiz Practice</h3>
+    <p> Click in the links below to find this week team activity and practice exercise.</p>
+       <a href="quiz/index.html">Quiz ninja start</a><br>
+       <a href="w05_teamActivity.html"> Week 05 Team Activity</a>
+
+    <h2 id="question">Question:</h2>
+    <ol>
+        <li>What is function overloading in JavaScript?</li>
+        <li> Should static method only be used when working with classes?</li>
+    </ol><br><br>
+
     </main>
     <footer>
         &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
@@ -369,6 +159,7 @@
         <p id="update">       </p>
     </footer>
     <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
