@@ -1,0 +1,59 @@
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /*----------- BODY --------------*/
+  
+  /*----------- HEADER --------------*/
+  
+  /*----------- NAVIGATION --------------*/
+  
+  /*----------- MAIN --------------*/
+  main {
+    margin: 10px;
+  }
+  main div {
+    align-self: center;
+    max-width: 300px;
+  }
+  
+
+
+  
+  ul {
+    padding: 0;
+    margin: 0 10px;
+  }
+  
+  li {
+    font-size: 1.2rem;
+    border-style: solid;
+    background-color: lavender;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0.5em 5px;
+  }
+  
+
+  
+  span {
+    margin: 0 0 0 5px;
+  }
+
+  
+  .hide {
+    display: none;
+  }
+  
+  /*----------- FOOTER --------------*/
+  
+  /*----- Clearfix: Force an Element not to collapse -----*/
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
