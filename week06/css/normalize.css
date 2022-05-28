@@ -1,0 +1,50 @@
+html {
+    line-height: 1.15; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  body {
+    margin: 0;
+  }
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  main {
+    
+    display: block;
+  }
+  
+
+  /* Text-level semantics
+     ========================================================================== */
+  
+  canvas {
+    display: inline-block;
+  }
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10-.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+  
