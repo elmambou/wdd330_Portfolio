@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 07 | Portfolio Home Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    
+    <main>
+        <h2 id="main-h1">WDD 330: Portfolio Week 7</h2>        
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li><a href="team-activity.html"> Week 07 Team Activity</a></li>
+            <li><a href="#quiz"> Ninja Quiz</a></li>
+            <li><a href="#question">Questions</a></li>
+        </ul>
+
+        <h2 id="note">My Notes:</h2>
+        <h2>Chapter 11: Further Functions from "JavaScript: Novice to Ninja"</h2>
+        <h3>Function Properties and Methods</h3>
+          <p>Functions are called <strong>first -class objects</strong> because they can have their own properties and methods.<br>
+        
+       <ul>
+        <li>
+          <p>The <strong>call()</strong> method can be used to set the value of <strong>this</strong> inside a function to an object that is provided as the first argument.</p>
+          <img src="images/callMethod.JPG" alt="Call Method">
+          <p> Nevertheless, If a function doesn’t have the value <strong>this</strong> , then you will need to provide <strong>null</strong>as its first argument.</p>
+          <img src ="images/thisAndNull.JPG " alt="This and Null methods">
+        </li>
+
+        <li>
+          <p>The <strong>apply()</strong> method. This is the same as the <em>call()</em> method except that it uses an array as argument.</p>
+        </li>
+
+
+        <li>
+          <p>The <strong>description</strong> property. This can be added to describe what the function does.</p>
+        <pre>
+          square.description = 'Squares a number that is provided as an argument'
+          &lt;&lt; 'Squares a number that is provided as an argument'
+        </pre>
+        </li>
+
+        <li>
+          <p><strong>Memoization</strong>.This feature is used to save teh result in a cache property. This way, the function wouldn't need to calculate an operation again.</p>
+
+          <pre>
+            function square(x){
+              square.cache = square.cache || {};
+              if (!square.cache[x]) {
+                square.cache[x] = x*x;
+              }
+              return square.cache[x]
+            }
+            
+            square(3);
+            &lt;&lt; 9
+            
+            square(-11);
+            &lt;&lt; 121
+            
+            square.cache;
+            &lt;&lt; {"3": 9, "-11": 121}</pre>
+        </li>
+        </ul>
+
+       
+       <h3>Immediately Invoked Function Expressions, <strong>IIFE</strong></h3>
+       <ul> 
+         <li>
+         <p><strong>IIFE</strong>.This function if invoked upon definition. For this, you will need to place parentheses as in:</p>
+         <img src="images/IIFE.JPG" alt="The Immediately Invoked Functions Expressions">
+        </li>
+
+        <li>
+          <p><strong>Temporary Variables</strong>. Because you cannot remove a variable from a scope once it's declared, we can place a code inside an IIFE to ensure that it's available when the IIFE is invoked as in: </p>
+           <pre>
+             let a = 1;
+             let b = 2;
+
+              (()=>{
+                  const temp = a;
+                  a = b;
+                  b = temp;
+              })();
+
+              a;
+              &lt;&lt;  2
+
+              b;
+              &lt;&lt;  1
+
+              console.log(temp);
+              &lt;&lt; Error: "temp is not defined"
+            </pre>
+          </li>
+
+          <li>
+            <p><strong>Initialization Code</strong>. Because the code is only run once, there’s no need to create any reusable, named functions, and all the variables will also be temporary</p>
+          </li>
+
+        </ul>
+
+        <h3>Functions that Define and Rewrite Themselves</h3>
+        <p>in JavaScript, Function can call itself, define itself, and rewrite itself.</p>
+           
+        <ul> 
+         <li>
+          <p><strong>Lazy Definition Pattern</strong> is often used when some initialization code is required the first time it’s invoked. For example:</p>
+            <pre>
+              function party() {
+                console.log('Wow this is amazing!');
+                party = function(){
+                console.log('Been there, got the T-Shirt');
+                }
+            }
+            
+            party.music = 'Classical Jazz'; // set a property of the function
+            
+            party();
+            &lt;&lt; "Wow this is amazing!"
+            
+            party.music; // function has now been redefined, so the property doesn't exist
+            &lt;&lt; undefined
+            </pre>
+          </li>
+
+         <li>
+            <p><strong>Init-Time Branching</strong>. Once used, this technique enables the functions to work more effectively in the browser, and avoid checking for features every time they’re invoked.</p>
+            <p>An <strong>if/else</strong> statement can also be used to determine which way the function should be written. This can be a useful pattern to initialize functions the first time they’re called, optimizing them for the browser being used</p>
+          </li>
+         </ul>
+
+        
+        <h3>Recursive Functions</h3>
+        <p>A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. An example is that of the factorial function of a number as in:</p>
+         <pre>
+          function factorial(n) {
+            if (n === 0) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+         </pre>
+
+
+        <h3>Callbacks</h3>
+        <p> <strong>Callbacks</strong> are functions passed to other functions as arguments and then invoked inside the function they are passed to. See example below: </p>
+        <pre>
+          function wait(message, callback, seconds){
+            setTimeout(callback,seconds * 1000);
+            console.log(message);
+        }
+        //This is how to create a callback function about the above.
+
+        function selfDestruct(){
+          console.log('BOOOOM!');
+      }
+        // Now as we invoke the wait() function, JavaScript will work asynchronously:
+
+            wait('This tape will self-destruct in five seconds ... ', selfDestruct, 5);
+            console.log('Hmmm, should I accept this mission or not ... ?');
+
+            &lt;&lt;  'This tape will self-destruct in five seconds ... '
+            &lt;&lt;  'Hmmm, should I accept this mission or not ... ? '
+            &lt;&lt;  'BOOOOM!'
+        </pre>
+        
+        <h3>Callback Hell</h3>
+        <ul>
+            <li>
+                <p> A <strong>Callback hell</strong> is the term used to refer to this tangled mess of code.</p>
+                <img src="images/callBackHell.JPG" alt=" Callback Hell">
+            </li>
+        </ul>
+    
+        <h3> Promises</h3>
+             <p> - A <strong>promise</strong> represents the future result of an asynchronous operation.</p>
+             <p> - A promise is a placeholder for the result of an asynchronous operation</p>
+             
+        <h4>Life Cycle of a promise</h4>
+        <ul>
+        <p> When a promise is created, it calls an asynchronous operation and is then said to be pending.</p>
+        <p>A promise can have the following outcomes</p>
+         <ul>
+            <li>
+               <p> <strong> Pending:</strong> this is the first status. It indicates the underlying operation has not completed. A promise will always have a pending status at some point in its life cycle.</p>
+            </li>
+
+            <li>
+                <p> <strong>Resolved or Fulfilled:</strong> his status indicates that the underlying operation has successfully completed.</p>
+            </li>
+
+            <li>
+               <p> <strong>Rejected:</strong> this status indicates that the underlying operation did not complete. This may be due to a bug, network issue, etc.</p>
+            </li>
+        </ul>
+
+
+        <h4>How to create a promise</h4>
+          <p>A promise is create using a constructor function by taking a function called an <strong>executor</strong> as argument.</p>
+          <p> Here is the general layout of a promise:</p>
+          <pre>
+            const promise = new Promise( (resolve, reject) => {
+              // initialization code goes here
+              if (success) {
+                  resolve(value);
+              } else {
+                  reject(error);
+              }
+            });
+          </pre>
+
+          <h4>Dealing With A Settled Promise</h4>
+          <ul>
+          <li>The<strong> then()</strong> method. This method is used to deal with the outcome.</li>
+          <pre>
+            promise.then( result => console.log(`Yes! I rolled a ${result}`), result => console.log(`Drat! 
+            ... I rolled a ${result}`) );
+          </pre>
+
+          <li>The<strong> catch()</strong> method. This method is used to specify what to do if the operation fails instead. In other words, it is used to deal with a failed outcome.</li>
+          <pre>
+            promise.catch( result => console.log(`Drat! ... I rolled a ${result}`));
+          </pre>
+          </ul>
+
+          <p>Example: The following code illustrates the behavior of a promise operation</p>
+          <pre>
+            const dice = {
+              sides: 6,
+                  roll() {
+                      return Math.floor(this.sides * Math.random()) + 1;
+                  }
+              }
+              
+              console.log('Before the roll');
+              
+              const roll = new Promise( (resolve,reject) => {
+                  const n = dice.roll();
+                  if(n > 1){
+                      setTimeout(()=>{resolve(n)},n*200);
+                  } else {
+                      setTimeout(()=>reject(n),n*200);
+                  }
+              });
+              
+              roll.then(result => console.log(`I rolled a ${result}`) )
+              .catch(result => console.log(`Drat! ... I rolled a ${result}`) );
+              
+              console.log('After the roll')
+          </pre>
+
+          // Possible outcome:
+          <pre>
+            before promise 
+            promise pending... 
+            after promise
+          </pre>
+
+          <h4>
+            <b><span style="color: red"
+              >Other information about promise operations</span></b>
+          </h4>
+          <ul>
+            <li><strong>Chaining Multiple Promises</strong>: This is used by chaining the <strong>then()</strong> methods together to form a sequential code that is easy to read.</li>
+            
+            <li>
+              <p><strong>Async Functions</strong>: It is achieved by using the <strong>await</strong> operator before an asynchronous function.</p>
+              <pre>
+                async function loadGame(userName) {
+
+                  try {
+                      const user = await login(userName);
+                      const info = await getPlayerInfo (user.id);
+                      // load the game using the returned info
+                  }
+              
+                  catch (error){
+                      throw error;
+                  }
+              }
+
+              </pre>
+            </li>
+
+            <li>
+              <p><strong>Generalized Functions</strong>: Callbacks can be used to build more generalized functions. </p>
+              <pre>
+                function random(a,b=1) {
+                  // if only 1 argument is provided, we need to swap the values of a and b
+                  if (b === 1) {
+                      [a,b] = [b,a];
+                  } 
+                  return Math.floor((b-a+1) * Math.random()) + a;
+              }
+              
+              random(6);
+              &lt;&lt; 4
+              
+              random(10,20);
+              &lt;&lt; 13
+
+              </pre>
+            
+            </li>
+            
+            <li>
+              <p><strong>Functions That Return Functions </strong>: Functions can accept another function; they can also return another function when invoked. </p>
+              </li>
+            </ul>
+
+        <h3>Closures</h3>
+          <ul>
+              <li>
+               <p> In JavaScript, a closure is a function that references variables in the outer scope from its inner scope. The closure preserves the outer scope inside its inner scope.</p>
+               <p> <b><span style="color: blue"> To find more about Closures</span></b>,
+                
+                <em>Please click here <a href="https://www.javascripttutorial.net/javascript-closure/"> "Javascript Closures"</a></p>
+              </li>
+          </ul>
+
+
+        <h2>Chapter 13: AJAX from "JavaScript: Novice to Ninja"</h2>
+
+            
+
+
+
+
+
+
+        <h3 id="quiz">Team Activity & Ninja Quiz Practice</h3>
+    <p> Click in the links below to find this week team activity and practice exercise.</p>
+       <a href="quiz/index.html">Quiz ninja start</a><br>
+       <a href="team-activity.html"> Week 07 Team Activity</a>
+
+    <h2 id="question">Question:</h2>
+    <ol>
+        <li>Is the <strong>Fetch API</strong> the recommended standard? If not, would there be a better version to get JSON data/API data to work more effectively? </li>
+        <li> Should static method only be used when working with classes?</li>
+    </ol><br><br>
+
+
+    <h4><a href = "../index.html">Return to Home</a></h4>
+
+
+    </main>
+    <footer>
+        &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+        <a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+        <p id="update">       </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
