@@ -159,12 +159,8 @@ function renderOneHikeFull(hike) {
         </div>
         <h2>Comments</h2>
         <ul class="comments"></ul>
-     
-          
-    
-    `;
+     `;
 
     // this.comments.showCommentList(hike.name);
-    
   return item;
 }
