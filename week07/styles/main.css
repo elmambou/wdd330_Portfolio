@@ -28,7 +28,15 @@ header {
 main {
     text-align: left;
 }
-
+pre {
+    background-color: rgb(236, 236, 236);
+    border-style: solid;
+  }
+  
+  table,
+  td {
+    border: 1px solid #000;
+  }
 #header-title {
     background-color: rgb(135, 206, 235);
     padding: 10px;
