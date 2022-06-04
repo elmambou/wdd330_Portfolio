@@ -332,6 +332,140 @@
 
 
         <h2>Chapter 13: AJAX from "JavaScript: Novice to Ninja"</h2>
+            
+            
+                    <h3><u>AJAX</u></h3>
+        <p>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. </p>
+
+        <h3><u>A Brief History of Ajax</u></h3>
+        <p>
+          The term “Ajax” was coined by Jesse James Garrett in 2005 in the article
+          “Ajax: A New Approach to Web Applications,” where he referred to techniques being used by Google in its recent web applications.
+          Asynchoronous loading were noticed when Google launched Gmail and Google Maps features in 2004 and 2005.
+          These web applications used asynchronous loading techniques to enhance the user experience by changing the parts of the page without a full refresh.
+        </p>
+        <table>
+          <tr>
+            <td id="td"><b><span style="color: blue">Asynchronous</span></b></td>
+            <td>
+              When a request for data is sent, the program doesn’t have to stop
+              and wait for the response. It can carry on running, waiting for an
+              event to fire when a response is received. By using callbacks to
+              manage this, programs are able to run in an efficient way, avoiding
+              lag as data is transferred back and forth.
+            </td>
+          </tr>
+          <tr>
+            <td id="td"><b><span style="color: blue">JavaScript</span></b></td>
+            <td>
+              JavaScript was always considered a front-end language, not used to
+              communicate with the server. Ajax enabled JavaScript to send
+              requests and receive responses from a server, allowing content to be
+              updated in real time.
+            </td>
+          </tr>
+          <tr>
+            <td id="td"><b><span style="color: blue">XML</span></b></td>
+            <td>
+              When the term Ajax was originally coined, XML documents were often
+              used to return data. Many different types of data can be sent, but
+              by far the most commonly used in Ajax nowadays is JSON, which is
+              more lightweight and easier to parse than XML. (Although it has
+              never really taken off, the termAjaj is sometimes used to describe
+              the technique.) JSON also has the advantage of being natively
+              supported in JavaScript, so you can deal with JavaScript objects
+              rather than having to parse XML files using DOM methods.
+            </td>
+          </tr>
+        </table>
+
+        <h3><u>API</u></h3>
+        <p>An application programming interface (API) is a collection of methods that allows external access to another program or service. Many websites allow controlled access to their data via public APIs. This means that developers are able to interact with the data and create mashups of third-party services</p>
+
+        <h3><u>The Fetch API</u></h3> 
+
+       <p>The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch.</p>
+          <pre>
+            fetch('https://example.com/data')
+            .then( // code that handles the response )
+            .catch( // code that runs if the server returns an error )
+          </pre>
+
+          <u>Response Interface</u>
+          <p>The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that allow us to process the response effectively.</p>
+          <u>Other Properties of the Response Object</u>
+          <table>
+            <tr>
+              <td id="td"><b>headers</b></td>
+              <td>
+                A Headers object (see later section) containing any headers associated with the response
+            </tr>
+            <tr>
+              <td id="td"><b>url</b></td>
+              <td>
+                A string containing the URL of response
+              </td>
+            </tr>
+            <tr>
+              <td id="td"><b>redirected</b></td>
+              <td>
+                A boolean value that specifies if the response is the result of a redirect
+              </td>
+            </tr>
+            <tr>
+              <td id="td"><b>type</b></td>
+              <td>
+                A string value of 'basic', 'cors', 'error' or 'opaque'
+              </td>
+            </tr>
+          </table>
+
+          <h3>FormData</h3>
+          <p>
+            The Fetch API includes the FormData interface, which makes it much
+            easier to submit information in forms using Ajax. A FormData instance is
+            created using a constructor function:
+          </p>
+          <pre>
+            <b>const data = new FormData();</b>
+          </pre>
+
+          <p><b>Example of a FormData used in main.js </b></p>
+          <pre>
+            const form = document.forms['todo'];
+
+            form.addEventListener('submit', addTask, false);
+            
+            function addTask(event) {
+                event.preventDefault();
+                const task = new FormData(form);
+                const url = `http://echo.jsontest.com/id/1/title/${form.task.value}`;
+                const headers = new Headers({
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                });
+                const request = new Request(url,
+                {
+                    method: 'POST',
+                    mode: 'cors',
+                    header: headers,
+                    body: JSON.stringify(task)
+                }
+                )
+            
+                fetch(request)
+                .then( response => response.json() )
+                .then( data => console.log(`${data.title} saved with an id of ${data.id}`) )
+                .catch( error => console.log('There was an error:', error))
+            
+            }
+          </pre> 
+
+          <h3>The Fetch API AS A Living Standard</h3>
+          <p>The Fetch API is also known as a 'living standard', which means that the specification is being developed 'in the wild'. This means that, despite it being available to use, it’s still subject to change as developers, browser vendors and end-users provide feedback about how it works.</p>
+
+
+            
 
             
 
