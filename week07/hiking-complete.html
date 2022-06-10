@@ -62,10 +62,27 @@
   <body>
     <main>
       <h1>Great hikes</h1>
-      <ul id="hikes" class="hikeStyles"></ul>
-      <section id="comments"></section>
+      <button class="back hidden"><-- Back</button>
+      <ul id="hikes" class="hikeStyles">
+      <!-- your hike list should be built here. -->
+      </ul>
+      <form id="comment-form" class="comment hidden">
+        <h2>Add Comment</h2>
+        <div class=comment-input-div>
+          <input id="comment-input" class="break" placeholder="Please enter your comments here and press submit" />
+          <button id="submit-comment" type="submit">Submit</button>
+        </div>
+      </form>
+      <section id="comments" class="comment hidden">
+        <h2>Comments</h2>
+        <ul id="comment-list">
+
+        </ul>
+      </section>
+     
+      
     </main>
 
-    <script src="app5.js" type="module"></script>
+    <script src="hikes.js" type="module"></script>
   </body>
 </html>
