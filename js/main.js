@@ -6,7 +6,7 @@ const links = [
   { label: 'Week 5', url: 'week05/index.html' },
   { label: 'Week 6', url: 'week06/index.html' },
   { label: 'Week 7', url: 'week07/index.html' },
-  { label: 'Week 8', url: 'week08/index.html' }
+  { label: 'Week 8', url: '#week08/index.html' }
 ];
 
 const ol = document.getElementById('assignments');   
