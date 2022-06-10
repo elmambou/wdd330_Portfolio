@@ -1,4 +1,4 @@
-import { hikeList } from './hikelist.js'
+import { hikeList } from './app5.js'
 import Comment from './comment.js'
 
 var comments = [];
