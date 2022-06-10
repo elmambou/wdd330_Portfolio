@@ -45,6 +45,15 @@ pre {
 }
 h2 {
     border-bottom: 1px solid black;
+
+.img {
+  float: left;
+  width: 7em;
+}
+    
+.big-img {
+  width: var(--width);
+}
     
 }
 #update {
