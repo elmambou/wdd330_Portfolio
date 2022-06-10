@@ -25,13 +25,13 @@ export const hikeList = [
   },
   
     {
-        name: 'Bechler Falls',
-    imgSrc: 'falls.jpg',
-    imgAlt: 'Image of Bechler Falls',
+    name: 'Wilderness Hiking',
+    imgSrc: 'https://trailngear.com/wp-content/uploads/2018/11/Wilderness-Hiking-in-the-Middle-of-Town-768x576.jpg',
+    imgAlt: 'Image of Hiking in the middle of town',
     distance: '3 miles',
     difficulty: 'Easy',
     description:
-      'Beautiful short hike along the Bechler river to Bechler Falls',
+      'Beautiful short hike in wilderness in the middle of town',
     directions:
       'Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead.',
     },
