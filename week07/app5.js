@@ -25,13 +25,15 @@ export const hikeList = [
   },
   
     {
-        name: "Sturtevant Falls",
-        imgSrc: "https://trailngear.com/wp-content/uploads/2018/11/Sturtevant-Falls-Location-and-Trails.png",
-        imgAlt: "Sturtevant Falls",
-        distance: "3 miles",
-        difficulty: "Relativesly easy",
-        description: "Los Angeles' most popular hiking destination.",
-        directions: "210 freeway, get off on Santa Anita Avenue and head toward the mountains. Santa Anita becames Chantry Flat Rd. Drive to the end and park."
+        name: 'Bechler Falls',
+    imgSrc: 'falls.jpg',
+    imgAlt: 'Image of Bechler Falls',
+    distance: '3 miles',
+    difficulty: 'Easy',
+    description:
+      'Beautiful short hike along the Bechler river to Bechler Falls',
+    directions:
+      'Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead.',
     },
   
   {
