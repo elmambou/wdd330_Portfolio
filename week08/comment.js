@@ -1,4 +1,4 @@
-'use strict';
+
 export default class Comment {
     constructor(name, comment) {
         this._name = name;
