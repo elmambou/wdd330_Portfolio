@@ -89,7 +89,7 @@ function showHikeComments(hikeName) {
     // Show comments for this hike only.
     let hikeComments = comments.filter(c => c.name === hikeName);
 
-    let section = document.getElementById("comment-section");
+    let section = document.getElementById("comments");
 
     if (hikeComments.length > 0) {
       section.classList.remove("hidden");
@@ -127,7 +127,7 @@ function showHikeList() {
 }
 
 function showAllComments() {
-  let section = document.getElementById("comment-section");
+  let section = document.getElementById("comments");
   let list = document.getElementById("comment-list");
   list.innerHTML = "";
 
