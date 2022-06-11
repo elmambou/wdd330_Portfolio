@@ -1,4 +1,14 @@
+:root {
+    --width: 90%;
+    --max-width: 1024px;
+}
+
 /* HTML Selectors */
+
+html {
+  max-width: var(--max-width);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
 article {
     margin: 10px;
@@ -45,8 +55,302 @@ pre {
 }
 h2 {
     border-bottom: 1px solid black;
-    
-}
+   }
+
+.example {
+    margin: 0;
+  }
+  
+.subtitle {
+    font-weight: bold;
+  }
+  
+.category {
+    margin-top: 1rem;
+  }
+
+  div {
+    margin: 0 0 2.5rem;
+  }
+  
+  #spinner {
+    border: 0.2em dashed rgb(255, 255, 204);
+    border-radius:100px;
+    color:#212121;
+    display:inline-block;
+    margin: 0 2% 0;
+    height:200px;
+    transition: all 1s ease;
+    width:200px;
+    background-color: aquamarine;
+  }
+
+  #spinner:hover {
+    background-color:rgba(255, 255, 204, 0.9);
+    border: 0.3em solid rgba(255, 255, 204, 0.9);
+    transform: rotate(360deg);
+  }
+
+/* Transition examples */
+/*For IE CSS3 transition property works starting IE10*/
+* {
+    box-sizing: border-box;
+  }
+
+
+  .box {
+    width: 50%;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  
+  div,
+  h2,
+  img {
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+
+
+  .translation {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: greenyellow;
+    transition: transform 1s ease-in;
+  }
+  
+  .translation:hover {
+    transform: translate(45px, 50px);
+  }
+  
+  .scaling {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: red;
+    transition: transform 2s ease;
+  }
+  
+  .scaling:hover {
+    transform: scale(2, 3);
+  }
+  
+.rotation {
+    width: 100px;
+    aspect-ratio: 1/2;
+    background: aquamarine;
+    display: inline-block;
+    transition: transform 1.5s ease;
+  }
+  
+.rotation:hover {
+    transform: rotate(45deg);
+  }
+  
+
+  
+  .skew {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    transition: transform 1.5s ease;
+  }
+  
+  .skew:hover {
+    transform: skew(35deg, 10deg);
+  }
+  
+  .transform2 {
+    width: 100px;
+    height: 100px;
+    background: violet;
+    border-radius: 60%;
+    transition: transform 2s linear;
+    transform-origin: top center; /* or we can use 10% 10% */
+  }
+  
+  .transform2:hover {
+    transform: rotate(360deg);
+  }
+  
+  .transform3 {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: blanchedalmond;
+    display: inline-block;
+    transition: transform 1.5s ease;
+  }
+  
+  .transform4 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-left: 5rem;
+    background: black;
+    transition: transform 1.5s ease;
+  }
+  
+  .transform3:hover {
+    transform: translateX(200px) rotate(135deg);
+  }
+  
+  .transform4:hover {
+    transform: rotate(135deg) translateX(200px);
+  }
+  
+  .size {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: skyblue;
+    background-image: -webkit-radial-gradient(red 10px, rgba(255, 0, 0, 0) 3px);
+    background-image: -o-radial-gradient(#9ed8d3 10px, rgba(255, 0, 0, 0) 3px);
+    background-image: radial-gradient(#9ed8d3 10px, transparent 3px);
+    background-size: 10px 10px;
+    box-shadow: black;
+  }
+  
+  .size:hover {
+    background-size: 20px 20px;
+  }
+  
+ .position {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    box-shadow:
+      0 2px 4px goldenrod,
+      0 -2px 4px rgba(0, 0, 0, .2);
+    background: url("https://html5book.ru/wp-content/uploads/2015/01/border-flower.png");
+    background-repeat: repeat;
+    background-position: bottom center;
+  }
+  
+  .position:hover {
+    background-position: top center;
+  }
+
+
+
+
+
+
+
+  .ease,
+  .linear,
+  .ease-in,
+  .ease-out,
+  .ease-in-out {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: lightseagreen;
+    transition: transform 3s;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  .ease:hover,
+  .linear:hover,
+  .ease-in:hover,
+  .ease-out:hover,
+  .ease-in-out:hover {
+    transform: translateX(600px);
+  }
+  
+  .ease {
+    transition-timing-function: ease;
+  }
+  
+  .linear {
+    transition-timing-function: linear;
+  }
+  
+  .ease-in {
+    transition-timing-function: ease-in;
+  }
+  
+  .ease-out {
+    transition-timing-function: ease-out;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+  
+  .positive-delay,
+  .negative-delay {
+    width: 150px;
+    aspect-ratio: 1/1;
+    background: cadetblue;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  .positive-delay {
+    transition: transform 3s ease-in 1s, background-color 2s ease;
+  }
+  
+  .negative-delay {
+    transition: transform 3s ease-in -1s; /* animatino will last only 1s => 2s -1s = 1s*/
+  }
+  
+  .positive-delay:hover,
+  .negative-delay:hover {
+    background-color: purple;
+    transform: translateX(500px);
+  }
+  
+  .move-right,
+  .appear-disappear,
+  .bg-move {
+    width: 150px;
+    aspect-ratio: 1/1;
+    background: cyan;
+  }
+  
+  .move-right:hover {
+    animation: moveRight 3s ease-in;
+  }
+  
+  .appear-disappear:hover {
+    animation: appearDisappear 1s linear alternate;
+  }
+  
+  .bg-move:hover {
+    animation: infiniteRotation 1.5s ease infinite;
+  }
+  
+  /* Animations starts here */
+  @keyframes moveRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(50%);
+    }
+  }
+  @keyframes appearDisappear {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    20%,
+    80% {
+      opacity: 1;
+    }
+  }
+  @keyframes infiniteRotation {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  
 #update {
     color: brown;
     font-size: small; 
