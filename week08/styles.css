@@ -1,0 +1,94 @@
+body {
+  background-image: url("plainImage.jpg");
+}
+
+h1 {
+  font-family: 'starjedi';
+  font-size: 3.5em;
+  text-align: center;
+  margin-top: -0px;
+  color:red;
+}
+
+
+h2 {
+  text-align: left;
+  margin-left: -0.25em;
+  color: blueviolet;
+}
+
+h3 {
+  text-align: center;
+  margin-left: -0.25em;
+  color:black;
+}
+
+a {
+  color: white;
+}
+
+.people,
+footer {
+  border: 0.2em solid turquoise;
+  border-radius: 0.3em;
+  padding: 1em;
+  margin-top: 0.5em;
+}
+
+.characterCard {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 2px solid white;
+  border-radius: 0.3em;
+}
+
+button {
+  background-color: lightskyblue;
+  border: 2px solid turquoise;
+  border-radius: 0.3em;
+  margin: 0.75em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button:hover {
+  padding: 0.75em 2em;
+  background-color: white;
+}
+
+button:disabled {
+  color: rgb(96, 96, 96);
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+a {
+  padding: 1rem;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+
+#previousnext {
+  margin: auto;
+}
+
+p {
+font-family: 'anakin';
+color: rgb(49, 49, 49);
+text-align: left;
+font-size: 1.1em;
+margin-top: 1.6em;
+}
+
