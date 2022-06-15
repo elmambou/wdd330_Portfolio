@@ -75,7 +75,7 @@ function showPeople(url = "https://swapi.dev/api/people") {
   })}
 
 function getPageUrls() {
-  let pageDiv = document.querySelector("#pages");
+  let pageDiv = document.querySelector("#page");
   for(let i=1; i < 10; i++) {
     let link = document.createElement("a");
     link.addEventListener("click", () => showPeople("https://swapi.dev/api/people/?page=" + i));
