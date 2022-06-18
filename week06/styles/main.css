@@ -1,4 +1,14 @@
+:root {
+    --width: 90%;
+    --max-width: 1024px;
+}
+
 /* HTML Selectors */
+
+html {
+  max-width: var(--max-width);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
 article {
     margin: 10px;
@@ -28,7 +38,15 @@ header {
 main {
     text-align: left;
 }
-
+pre {
+    background-color: rgb(236, 236, 236);
+    border-style: solid;
+  }
+  
+  table,
+  td {
+    border: 1px solid #000;
+  }
 #header-title {
     background-color: rgb(135, 206, 235);
     padding: 10px;
@@ -37,6 +55,15 @@ main {
 }
 h2 {
     border-bottom: 1px solid black;
+
+.img {
+  float: left;
+  width: 7em;
+}
+    
+.big-img {
+  width: var(--width);
+}
     
 }
 #update {
