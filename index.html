@@ -5,23 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WDD 330 Elie Silvere Mambou Portfolio</title>
   <link rel="stylesheet" href="main.css">
-  
-  
- </head>
+  </head>
 
-<body>
-  <main>
-  <h1> WDD 330 Portfolio</h1>
-  
-    <h2>Welcome to my Course Portal Homepage</h2>
-    <h3>Please click on the links below to navigate to your destination.</h3>
-  <ol id="assignments">
-      
-  </ol>
+ <script>
+  function loadMenu() {
+    links.block1.forEach(element => {
+      document.getElementById("contentsBlockOne").innerHTML += `<li><a href=${element.url}>${element.label}</a></li>`
+    });
+
+    links.block2.forEach(element => {
+      document.getElementById("contentsBlockTwo").innerHTML += `<li><a href=${element.url}>${element.label}</a></li>`
+    });
+
+  }
+ </script>
  
-    
-    
-  <script src="https://github.com/elmambou/wdd330_Portfolio/blob/main/js/main.js"></script>
+ <body onload="loadMenu()">
+  <main>
+  <h1> WDD 330 Portfolio - Spring 2022</h1>
+
+  <p id="student"><span class="to-do">Elie S. Mambou</span>, Spring 2022</p>
+  
+   <table>
+    <tr>
+      <td>
+      <section id="block1">
+        <h2>Block 1</h2>
+        <ol id="contentsBlockOne"></ol>
+      </section>
+  
+      <section class="block" id="block2">
+        <h2>Block 2</h2>
+        <ol id="contentsBlockTwo" start="8"></ol>
+      </section>
+      </td>
+      <td id="screenshot">
+   
+      </td>
+    </tr>
+  </table>
+
+    <script src="js/menu.js"></script>
   </main>
 </body>
 </html>
