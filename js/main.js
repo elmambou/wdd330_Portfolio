@@ -1,7 +1,7 @@
 const links = {
   block1: [
       { label: "Week 1 Report and Content ", url: "week01/index.html"},
-      { label: "Week 2 Report and Content", url: "w02/index.html"},
+      { label: "Week 2 Report and Content", url: "week02/index.html"},
       { label: "Week 3 Report and Content", url: "week03/index.html"},
       { label: "Week 4 Report and Content", url: "week04/index.html"},
       { label: "Week 5 Report and Content", url: "week05/index.html"},
