@@ -1,0 +1,45 @@
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: blueviolet;
+    /* animation: spin 8s ease infinite; */
+    animation-name: spin-and-bounce;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+h2 {
+    margin-left: .6em;
+}
+
+@keyframes spin-and-bounce {
+    from {
+        transform: rotate(0deg);
+        margin-left: 0;
+        margin-top: 190px;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        margin-left: 190px;
+        margin-top: 0;
+    }
+    25% {
+        transform: rotate(360deg);
+        margin-left: 390px;
+        margin-top: 190px;
+    }
+    
+    75% {
+        transform: rotate(180deg);
+        margin-left: 190px;
+        margin-top: 0;
+    }
+
+    to {
+        transform: rotate(0deg);
+        margin-left: 0;
+        margin-top: 190px;
+    }
+}
