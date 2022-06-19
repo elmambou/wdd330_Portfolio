@@ -12,11 +12,11 @@ const links = {
   block2: [
       { label: "Week 8 Report and Content", url: "week08/index.html"},
       { label: "Week 9 Report and Content", url: "week09/index.html"},
-      { label: "Week 10 Report and Content", url: "week10/index.html"},
-      { label: "Week 11 Report and Content", url: "week11/index.html"},
-      { label: "Week 12 Report and Content", url: "week12/index.html"},
-      { label: "Week 13 Report and Content", url: "week13/index.html"},
-      { label: "Week 14 Report and Content", url: "week14/index.html"},
+      { label: "Week 10 Report and Content", url: "#"},
+      { label: "Week 11 Report and Content", url: "#"},
+      { label: "Week 12 Report and Content", url: "#"},
+      { label: "Week 13 Report and Content", url: "#"},
+      { label: "Week 14 Report and Content", url: "#"},
       { label: "Final Project(Under construction)",url: "#"},
   ]
 }
