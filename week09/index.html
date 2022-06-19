@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 09 | Portfolio Home Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    <main>
+        <h2 id="main-h1">WDD 330: Portfolio Week 9</h2><br>
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li><a href="proposal/index.html">Final Project Proposal Draft</a></li>
+            <li><a href="javascript30-drums/index-START.html"> Week 09 Team Activity</a></li>
+            <li><a href="animation/index.html"> Animation Spin Practice Exercise</a></li>           
+            <li><a href="ninjaQuiz14/index.html"> Ninja Ch14 Practice Exercise</a></li>
+            <li><a href = "websocket/websocket.html">Websocket practice</a></li>
+            <li><a href = "parcel/src/index.html">Modern Workflow Exercise</a></li>
+        </ul>
+        
+        <h2 id="note">My Notes: Chapter 9 & 14 "JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION"</h2>
+        <h3>The Window Object</h3>
+
+        <p>The window object represents a window in the browser. An object of the window is created automatically by the browser.</p>
+        <p>The <strong>window</strong> is the object of the browser, it is not the object of javascript. The javascript objects are string, array, date, etc.</p>
+        <h3 class="h2">Methods of window object</h3>
+        <p>The important methods of window object are as follows:</p>
+        <table class="alt">
+        <tr><th>Method</th><th>Description</th></tr>
+        <tr><td>alert()</td><td>displays the alert box containing message with ok button.</td></tr>
+        <tr><td>confirm()</td><td>displays the confirm dialog box containing message with ok and cancel button.</td></tr>
+        <tr><td>prompt()</td><td>displays a dialog box to get input from the user.</td></tr>
+        <tr><td>open()</td><td>opens the new window.</td></tr>
+        <tr><td>close()</td><td>closes the current window.</td></tr>
+        <tr><td>setTimeout()</td><td>performs action after specified time like calling function, evaluating expressions etc.</td></tr>
+        </table>
+        
+        <hr />
+            <h4 class="h4">Example of alert() in javascript</h4>
+            <p>It displays alert dialog box. It has message and ok button.</p>
+            <pre>
+            &lt;script type="text/javascript"&gt;
+            function msg(){
+            alert("Hello Alert Box");
+            }
+            &lt;/script&gt;
+            &lt;input type="button" value="click" onclick="msg()"/&gt;
+            </pre>
+            <hr />
+            <h4 class="h4">Output of the above example</h4>
+            <div class="codeblock3">
+            <script type="text/javascript">
+            function msg(){
+            alert("Hello Alert Box");
+            }
+            </script>
+            <input type="button" value="click" onclick="msg()" />
+            </div>
+            <hr />
+
+            <h4 class="h4">CONFIRM - Example in javascript</h4>
+            <p>It displays the confirm dialog box. It has message with ok and cancel buttons.</p>
+            <pre>
+            &lt;script type="text/javascript"&gt;
+            function msg(){
+            var v= confirm("Are u sure?");
+            if(v==true){
+            alert("ok");
+            }
+            else{
+            alert("cancel");
+            }
+
+            }
+            &lt;/script&gt;
+
+            &lt;input type="button" value="delete record" onclick="msg()"/&gt;
+
+            </pre>
+            <hr />
+            <h4 class="h4">Output of the above example</h4>
+            <div class="codeblock3">
+            <script type="text/javascript">
+            function msg2(){
+            var v= confirm("Are u sure?");
+            if(v==true){
+            alert("ok");
+            }
+            else{
+            alert("cancel");
+            }
+            }
+            </script>
+            <input type="button" value="delete record" onclick="msg2()" />
+            </div>
+
+            <hr />
+            <h4 class="h4">Example of prompt() in javascript</h4>
+            <p>It displays prompt dialog box for input. It has message and textfield.</p>
+            <pre>
+            &lt;script type="text/javascript"&gt;
+            function msg(){
+            var v= prompt("Who are you?");
+            alert("I am "+v);
+            }
+            &lt;/script&gt;
+
+            &lt;input type="button" value="click" onclick="msg()"/&gt;
+            </pre>
+
+            <hr />
+            <h4 class="h4">Output of the above example</h4>
+            <div class="codeblock3">
+            <script type="text/javascript">
+            function msg3(){
+            var v= prompt("Who are you?");
+            alert("I am "+v);
+            }
+            </script>
+            <input type="button" value="click" onclick="msg3()" />
+            </div>
+
+            <hr />
+            <h4 class="h4">Example of open() in javascript</h4>
+            <p>It displays the content in a new window.</p>
+            <pre>
+            &lt;script type="text/javascript"&gt;
+            function msg(){
+            open("http://www.youtube.com");
+            }
+            &lt;/script&gt;
+            &lt;input type="button" value="youtube" onclick="msg()"/&gt;
+            </pre>
+
+            <hr />
+            <h4 class="h4">Output of the above example</h4>
+            <div class="codeblock3">
+            <script type="text/javascript">
+            function msg4(){
+            open("http://www.youtube.com");
+            }
+            </script>
+            <input type="button" value="youtube" onclick="msg4()" />
+            </div>
+            <hr />
+            <h4 class="h4">Example of setTimeout() in javascript</h4>
+            <p>It performs its task after the given milliseconds.</p>
+            <pre>
+            &lt;script type="text/javascript"&gt;
+            function msg(){
+            setTimeout(
+            function(){
+            alert("Welcome to my page after 2 seconds")
+            },2000);
+
+            }
+            &lt;/script&gt;
+
+            &lt;input type="button" value="click" onclick="msg()"/&gt;
+            </pre>
+
+            <hr />
+            <h4 class="h4">Output of the above example</h4>
+            <div class="codeblock3">
+            <script type="text/javascript">
+            function msg5(){
+            setTimeout(
+            function(){
+            alert("Welcome to my page after 2 seconds")
+            },2000);
+            }
+            </script>
+            <input type="button" value="click" onclick="msg5()" />
+            </div>
+
+            <h3>Animation</h3>
+            <p>The <strong>setTimeOut()</strong> and <strong>setInterval()</strong> methods can be used to animate elements on a web page</p>
+
+            <h2>HTML5 APIs</h2>
+            <h3>HTML5 Web Storage</h3>
+            <p>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use</p>
+
+            <h3>HTML Web Storage</h3>
+            <p>The Web Storage API provides a key-value store on the client's computer that is similar to
+                using cookies but
+                has fewer restrictions, more storage capacity, and is generally easier to use.</p>
+            <p>Web Storage API features crucial difference with cookies</p>
+            <ul>
+                <li>Information stored is not shared with the server on every request</li>
+                <li>Information is available in multiple windows of the browser (if the domain is the same.)
+                </li>
+                <li>Storage capacity limit is much larger tht the 4KB limit for cookies.</li>
+                <li>Does not automatically expire.</li>
+            </ul>
+
+            <hr />
+            <h4>Websockets</h4>
+                    <p>Websocket is a new protocol that allows two-way communication with a server –
+                        also known as push messaging. This means that a connection is kept open and
+                        responses are ‘pushed’ to the client as soon as they are received.</p>
+                    <h3>Web Socket Code Sample</h3>
+                    <form action="#">
+                        <label for='message'>Enter a Message:</label>
+                        <input type='text' name='message'>
+                        <button type='submit'>Submit</button>
+                    </form>
+                    <div id="output"></div>
+                    <script>
+                        const URL = 'wss://echo.websocket.org/';
+                        outputDiv = document.getElementById('output');
+                        form = document.forms[0];
+                        connection = new WebSocket(URL);
+
+                        connection.addEventListener('open', () => {
+                            output('CONNECTED');
+                        }, false);
+
+                        function output(message) {
+                            const para = document.createElement('p');
+                            para.innerHTML = message;
+                            outputDiv.appendChild(para);
+                        }
+
+                        form.addEventListener('submit', message, false);
+
+                        function message(event) {
+                            event.preventDefault();
+                            const text = form.message.value;
+                            output(`SENT: ${text}`);
+                            connection.send(text);
+                        }
+
+                        connection.addEventListener('message', (event) => {
+                            output(`RESPONSE: ${event.data}`);
+                        }, false);
+
+                        connection.addEventListener('close', () => {
+                            output('DISCONNECTED');
+                        }, false);
+
+                        connection.addEventListener('error', (event) => {
+                            output(`<span style='color: red;'>ERROR: ${event.data}</span>`);
+                        }, false);
+                    </script> 
+            
+            <hr />
+            <h3>Web Workers</h3>
+            <p>Web workers allow processes to be run in the background, adding support for concurrency in JavaScript</p>
+            <p>To get started, use the Worker() constructor function to create a new worker:</p>
+            <pre>const worker = new Worker('task.js');</pre>
+
+            <h3>Multimedia</h3>
+            <p>HTML5 introduced the <strong>&lt;audio&gt;</strong> and <strong>&lt;video&gt;</strong> tags used to insert audio and video clips into a web page. It also introduced a Media API for controlling the playback of the clips using JavaScript.</p>
+            <p>An audio clip can be inserted into a page with the <strong>&lt;audio&gt;</strong> tag, using the src attribute to point to the audio file:</p>
+            <pre>
+            &lt;audio src='/song.mp3' controls&gt;
+            Your browser does not support the audio element.
+            &lt;/audio&gt;
+            </pre>
+            <p>A video clip can be inserted with the <strong>&lt;video&gt;</strong> tag, using the src attribute to point to the movie file:</p>
+            <pre>
+            &lt;video src='http://movie.mp4' controls&gt;
+            Your browser does not support the video element.
+            &lt;/video&gt;
+            </pre>
+
+            <h3 id="quiz">Team Activity & <b><span style="color: red"> The Window Object, Ch9 & Ch14: HTML5 APIs Practice Exercises.</span></b></h3>
+                    <p> Click in the links below to find this week team activity and practice exercises.</p>
+
+                    <li><a href="javascript30-drums/index-START.html"> Week 09 Team Activity</a></li>
+                    <li><a href="animation/index.html"> Animation Spin Practice Exercise</a></li>           
+                    <li><a href="ninjaQuiz14/index.html"> Ninja Ch14 Practice Exercise</a></li>
+                    <li><a href = "websocket/websocket.html">Websocket practice</a></li>
+                    <li><a href = "parcel/src/index.html">Modern Workflow Exercise</a></li>
+
+    
+            <h3 id="question">Question:</h3>
+            <p><strong> NONE: I have no question for this week.</strong></p>
+
+
+            <h3><a href = "../index.html">Return to Home Page</a></h3>
+            
+    </main>
+    <footer>
+        &copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+        <a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+        <p id="update">       </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    
+</body>
+
+</html>
+
