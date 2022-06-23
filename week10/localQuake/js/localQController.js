@@ -1,6 +1,6 @@
 import { getLocation } from './utilities.js';
-import Quake from './Quake.js';
-import QuakesView from './QuakesView.js';
+import quake from './quake.js';
+import localQView from './localQView.js';
 
 // Quake controller
 export default class localQController {
@@ -12,7 +12,7 @@ export default class localQController {
       lon: 0
     };
     this.quakes = new Quake();
-    this.quakesView = new QuakesView();
+    this.localQView = new localQView();
   }
   async init() {
     this.parentElement = document.querySelector(this.parent);
