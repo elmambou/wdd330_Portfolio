@@ -1,6 +1,6 @@
 import { getJSON } from './utilities.js';
 // Quake Model
-export default class Quake {
+export default class quake {
   constructor() {
     this.baseUrl =
       'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson';
@@ -16,7 +16,7 @@ export default class Quake {
     );
     return this._quakes;
   }
-  getQuakeById(id) {
+  getquakeById(id) {
     return this._quakes.features.filter(item => item.id === id)[0];
   }
 }
