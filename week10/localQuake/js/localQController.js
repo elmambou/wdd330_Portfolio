@@ -49,6 +49,6 @@ export default class localQController {
   }
   async getquakeDetails(quakeId) {
     const quake = this.quakes.getquakeById(quakeId);
-    this.localQView.renderquake(quake, this.parentElement);
+    this.quakesView.renderquake(quake, this.parentElement);
   }
 }
