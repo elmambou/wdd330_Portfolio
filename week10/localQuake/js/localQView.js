@@ -1,5 +1,5 @@
 export default // Quake View handler
-class QuakesView {
+class localQView {
   renderQuakeList(quakeList, listElement) {
     listElement.innerHTML = quakeList.features
       .map(quake => {
