@@ -12,7 +12,7 @@ export default class localQController {
       lon: 0
     };
     this.quakes = new Quake();
-    this.quakesView = new QuakesView();
+    this.quakesView = new localQView();
   }
   async init() {
     this.parentElement = document.querySelector(this.parent);
