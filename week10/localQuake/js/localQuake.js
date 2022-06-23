@@ -1,8 +1,8 @@
-import QuakesController from './QuakesController.js';
+import localQController from './localQController.js';
 import buildNavigation from './routing.js';
 
 const navElement = document.getElementById('mainNav');
 buildNavigation(navElement);
 
-// const myQuakesController = new QuakesController('#quakeList');
-// myQuakesController.getQuakesByRadius();
+// const mylocalQController = new localQController('#quakeList');
+// mylocalQController.getQuakesByRadius();
