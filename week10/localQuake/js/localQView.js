@@ -9,7 +9,7 @@ class localQView {
       })
       .join('');
   }
-  renderlocalQuake(quake, element) {
+  renderQuake(quake, element) {
     const quakeProperties = Object.entries(quake.properties);
     console.log(quakeProperties);
     const output = `
