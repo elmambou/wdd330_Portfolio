@@ -11,7 +11,7 @@ export default class localQController {
       lat: 0,
       lon: 0
     };
-    this.quakes = new Quake();
+    this.quakes = new localQuake();
     this.quakesView = new localQView();
   }
   async init() {
