@@ -1,6 +1,6 @@
 import { getLocation } from './utilities.js';
-import quake from './quake.js';
-import localQView from './localQView.js';
+import Quake from './Quake.js';
+import QuakesView from './QuakesView.js';
 
 // Quake controller
 export default class localQController {
@@ -11,13 +11,13 @@ export default class localQController {
       lat: 0,
       lon: 0
     };
-    this.quakes = new quake();
-    this.localQView = new localQView();
+    this.quakes = new Quake();
+    this.quakesView = new QuakesView();
   }
   async init() {
     this.parentElement = document.querySelector(this.parent);
     await this.initPos();
-    this.getquakesByRadius(100);
+    this.getQuakesByRadius(100);
   }
   async initPos() {
     if (this.position.lat === 0) {
@@ -32,7 +32,7 @@ export default class localQController {
     }
   }
 
-  async getquakesByRadius(radius = 100) {
+  async getQuakesByRadius(radius = 100) {
     //set loading message
     this.parentElement.innerHTML = '<li>Loading...</li>';
     // get the list of quakes in the specified radius of the location
@@ -44,11 +44,11 @@ export default class localQController {
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
     // add a listener to the new list of quakes to allow drill down in to the details
     this.parentElement.addEventListener('touchend', e => {
-      this.getquakeDetails(e.target.dataset.id);
+      this.getQuakeDetails(e.target.dataset.id);
     });
   }
-  async getquakeDetails(quakeId) {
-    const quake = this.quakes.getquakeById(quakeId);
-    this.quakesView.renderquake(quake, this.parentElement);
+  async getQuakeDetails(quakeId) {
+    const quake = this.quakes.getQuakeById(quakeId);
+    this.quakesView.renderQuake(quake, this.parentElement);
   }
 }
