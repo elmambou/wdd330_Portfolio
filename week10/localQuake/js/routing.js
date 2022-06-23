@@ -1,13 +1,13 @@
-import localQController from './localQController.js';
+import QuakesController from './QuakesController.js';
 
 const routes = [
   {
-    controller: new localQController('#quakeList'),
+    controller: new QuakesController('#quakeList'),
     file: 'views/quakeList.html',
     label: 'Local Quakes'
   },
   {
-    controller: new localQController('#quakeList'),
+    controller: new QuakesController('#quakeList'),
     file: 'views/quakeList.html',
     label: 'Yellowstone Quakes'
   }
