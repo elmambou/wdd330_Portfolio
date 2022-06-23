@@ -17,7 +17,7 @@ const links = {
       { label: "  ", url: "#"},
       { label: " ", url: "#"},
       { label: "  ", url: "#"},
-      { label: "Final Project(Under construction)",url: "#"},
+      { label: "Final Project(Under construction)",url: "week10/localQuake.html"},
   ]
 }
 
