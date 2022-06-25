@@ -13,7 +13,6 @@ const links = {
       { label: "Week 8 Report and Content", url: "week08/index.html"},
       { label: "Week 9 Report and Content", url: "week09/index.html"},
       { label: "Week 10 Report and Content", url: "week10/index.html"},
-      { label: <a href="week10/index.html">Week 10 Report and Content </a>   |  <a href="week10/localQuake/localQuake.html">Week10 Team Activity</a> },
     
       { label: "  ", url: "#"},
       { label: " ", url: "#"},
