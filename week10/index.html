@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdd 330: Week 10 | Portfolio Home Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+        <!-- STYLE SHEETS -->
+        <link href="css/normalize.css" rel="stylesheet" />
+        
+        <link href="css/small.css" rel="stylesheet" />
+        <!-- enhance-tablet -->
+        <link href="css/medium.css" rel="stylesheet" />
+        <!-- enhance-desktop -->
+        <link href="css/large.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Elie Silvere Mambou</h1>
+    </header>
+    <main>
+
+        <h2 id="main-h1">WDD 330-Fall 2022: Portfolio Week 10</h2><br>
+         
+        <h2 id="note">Week 10 reading: Form_validation & Using_Fetch</h2>
+
+
+        <ul>
+            <li><a href="#note"> My Notes</a></li>
+            <li><a href="fetch/index.html"><b><span style="color: red"> Fetch Exercise. </span></b></a></li>
+
+            <li><a href="quake/quakes.html"><b><span style="color: black"> Week 10 Team Activity </span></b></a></li>
+
+            <li><a href="validation.html"><b><span style="color: green"> Validation Exercise.</span></b></a></li>
+            <li><a href = "javat_validation.html">JavaScript Validation</a></li>
+        </ul>
+
+
+        <h3> Client Side Form Validation</h3>
+        <p> A client-side form validation ensures that all required form controls are filled out in 
+          the correct format.
+        </p>
+
+        <p> <em><strong>Form validation is the process of checking whether a user has entered the
+          information into a form correctly.</strong></em>
+        </p>
+        <p>Types of form validators:</p>
+
+            <ul>
+            <li><em>Validation done on the <u>client side</u> using JavaScript</em></li>
+            <li><em>Validation done on the <u>server side</u></em></li>
+            </ul>
+        
+        <p>There are 3 main reasons for validation forms:</p>
+        <ul>
+          <li><em>To get the right data, in the right format.</em></li>
+          <li><em>To protect the users' data</em></li>
+          <li><em>To protect our account information.</em></li>
+        </ul>
+      
+        <h3>Different types of client-side validation</h3>
+        <ul>
+            <li><u>Built-in form validation</u>: uses HTML5 form validation features</li>
+            <li><u>JavaScript</u> validation is coded using uses JavaScript and its validation is completely customizable</li>
+        </ul>
+        
+        <h3>Built-in form validation that does not rely on JavaScript</h3>
+        <ul>
+            <li>Required</li>
+            <li>minLength and maxLength</li>
+            <li>min and max</li>
+            <li>type</li>
+            <li>pattern</li>
+        </ul>
+        
+        <p>If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid. If not, it is considered invalid.
+            When an element is valid, the following things are true:</p>
+        <ul>
+            <li>The element matches the :valid CSS pseudo-class, which lets you apply a specific style to valid elements.</li>
+            <li>The element matches the :invalid CSS pseudo-class, and sometimes other UI pseudo-classes (e.g., :out-of-range) 
+                depending on the error, which lets you apply a specific style to invalid elements</li>
+
+        </ul>
+
+        
+        <h3>Validating form using JavaScript </h3>
+        <p>Constraint validation API consists of set of methods and properties available on the following form element DOM interfaces:</p>
+        <ul>
+            <li>HTMLButtonElement (represents a &lt;button&gt; element)</li>
+            <li>HTMLFieldSetElement (represents a &lt;fieldset&gt; element)</li>
+            <li>HTMLInputElement (represents an &lt;input&gt; element)</li>
+            <li>HTMLOutputElement (represents an &lt;output&gt; element)</li>
+            <li>HTMLSelectElement (represents a &lt;select&gt; element)</li>
+            <li>HTMLTextAreaElement (represents a &lt;textarea&gt; element)</li>
+        </ul>
+
+        <pre> <b><span style="color: red">Warning:</span></b>
+          Never trust data passed to your server from the client.
+          Even if your form is validating correctly and preventing
+          malformed input on the client-side, a malicious user can
+          still alter the network request.
+        </pre>    
+
+        <h3>Learning more about Forms </h3>
+        <p>Click the link <a href="  https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced Form Styling</a></p>
+        <br>
+
+
+        <h2><b><span style="color: blue"> Using Fetch</span></b></h2>
+        <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses</p>
+        <p>A basic fetch request is really simple to set up. See example below:</p>
+        <pre>
+            fetch('http://example.com/movies.json')
+              .then(response => response.json())
+              .then(data => console.log(data));
+        </pre>
+        <h3>Supplying request options:</h3>
+        <p>
+           The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings</p>
+        <h3>Sending a request with credentials included</h3>
+        <pre>
+            fetch('https://example.com', {
+              credentials: 'include'
+            });
+        </pre>
+        <p> Use <b>credentials: 'same-origin'</b> if you only want to send credentials if the request URL is on the same origin as the calling script.<br>
+            At a same time use <b>credentials: 'omit'</b> to ensure browsers don’t include credentials in the request</p>
+        <h3>Uploading JSON data</h3>
+        <p>Use fetch() to POST JSON-encoded data.</p>
+        <pre>
+            const data = { username: 'example' };
+
+            fetch('https://example.com/profile', {
+              method: 'POST', // or 'PUT'
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+          </pre>
+          <h3><b><span style="color: blue"> Uploading A File.</span></b></h3>
+
+          <p>Files can be uploaded using an HTML <input type="file" /> input element, FormData() and fetch().</p>
+          <pre>
+            const formData = new FormData();
+            const fileField = 
+            document.querySelector('input[type="file"]');
+
+            formData.append('username', 'abc123');
+            formData.append('avatar', fileField.files[0]);
+
+            fetch('https://example.com/profile/avatar', {
+              method: 'PUT',
+              body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+              console.log('Success:', result);
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+            </pre>
+            <h3><b><span style="color: red"> Uploading Multiple Files. </span></b></h3>
+
+              <p>Files can be uploaded using an HTML <input type="file" multiple /> input element, FormData() and fetch().</p>
+      <pre>
+        const formData = new FormData();
+        const photos = document.querySelector(
+                  'input[type="file"][multiple]');
+
+            formData.append('title', 'My Vegas Vacation');
+            for (let i = 0; i < photos.files.length; i++) {
+            formData.append(`photos_${i}`, photos.files[i]);
+              }
+
+           fetch('https://example.com/posts', {
+             method: 'POST',
+             body: formData,
+              })
+            .then(response => response.json())
+            .then(result => {
+             console.log('Success:', result);
+              })
+             .catch(error => {
+              console.error('Error:', error);
+              });
+        </pre>
+        <h3>Processing a text file line by line</h3>
+        <pre>
+           async function* makeTextFileLineIterator(fileURL) {
+           const utf8Decoder = new TextDecoder('utf-8');
+           const response = await fetch(fileURL);
+           const reader = response.body.getReader();
+           let { value: chunk, done: readerDone } =
+           await reader.read();
+           chunk = chunk ? utf8Decoder.decode(chunk) : '';
+           const re = /\n|\r|\r\n/gm;
+           let startIndex = 0;
+           let result;
+           for (;;) {
+           let result = re.exec(chunk);
+           if (!result) {
+           if (readerDone) {
+                        break;
+                     }
+       let remainder = chunk.substr(startIndex);
+       ({ value: chunk, done: readerDone } = 
+       await reader.read());
+       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+                 startIndex = re.lastIndex = 0;
+                 continue;
+                       }
+                 yield chunk.substring(startIndex, result.index);
+                 startIndex = re.lastIndex;
+                      }
+                 if (startIndex < chunk.length) {
+                 // last line didn't end in a newline char
+                 yield chunk.substr(startIndex);
+                    }
+                    }
+
+                 async function run() {
+      for await (let line of makeTextFileLineIterator(urlOfFile)) {
+                processLine(line);
+                      }
+                    }
+
+                    run();     
+        </pre>
+       <h3>Checking that the fetch was successful</h3>
+           <pre>
+              fetch('flowers.jpg')
+               .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                     }
+                   return response.blob();
+                    })
+                     .then(myBlob => {
+                        myImage.src = URL.createObjectURL(myBlob);
+                     })
+                      .catch(error => {
+         console.error('There has been a problem with your fetch 
+         operation:', error);
+                      });
+  
+              </pre>
+                          
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Please click this link for full documentation</a></p>     
+
+     
+        <h3>Some example of Validation Form</h3>
+        <h3>Built in Form Validation</h3>
+        <p> Click the following link to check our <a href="validation.html">HTML's built-in validation features</a> </p>
+        <h3>JavaScript Validation</h3>
+        <p>Click the link <a href="javat_validation.html">JavaScript validation features</a></p>
+        <br>
+          
+        <br>
+ 
+      <h3 id="quiz">Team Activity & <b><span style="color: blue"> Using_Fetch & Form_validation.</span></b></h3>
+      <p> Click in the links below to find this week team activity and practice exercises.</p>
+
+      <ul>
+        <li><a href="#note"> My Notes</a></li>
+
+        <li><a href="fetch/index.html"><b><span style="color: red"> Working with Fetch example of quakes.</span></b></a></li>
+        <li><a href="quake/quakes.html"><b><span style="color: black"> Week 10 Team Activity </span></b></a></li>
+        <li><a href = "validation.html"> Validation Exercise</a></li>       
+        <li><a href = "javat_validation.html">JavaScript Validation Example</a></li>
+      </ul>
+
+
+<h3 id="question">Question:</h3>
+<p><strong> NONE: I have no question for this week.</strong></p>
+
+
+<h3><a href = "../index.html">Return to Home Page</a></h3>
+
+</main>
+<footer>
+&copy; <span id="year"></span> | Elie Silvere Mambou | South Africa | 
+<a href="https://www.byui.edu/online" id="footer-link">BYU Online Learning</a>
+<p id="update">       </p>
+
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/fetch.js"></script>
+    <script src="fetch/fetch.js"></script>
+
+    
+</body>
+
+</html>
