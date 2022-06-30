@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap');
+
+
+body {
+    color: #393D3F;
+    background-color: #ffefba;
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color:#62929E;
+}
+
+h3 {
+    color: #393D3F;
+    background-color: #FDFDFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center !important;
+
+
+
+}
+
+
+header {
+    background-color: #393D3F;
+    color: #FDFDFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: auto;
+    padding: 15px;
+    max-width: 960px;
+}
+
+main {
+    margin: auto;
+    padding: 15px;
+    max-width: 960px;
+    background-color:#7bc6cc;
+}
+
+.headerBar {
+    display: block;
+    font-size: 1rem;
+    margin: auto;
+    padding: 5px;
+    background-color: #C6C5B9;
+    justify-content: center;
+}
+
+.euLogo img {
+    height: 25px;
+    /* height: auto; */
+
+}
+
+.euImg img{
+    display: block;
+    width: 30%;
+    margin: auto;
+    padding: 5px;
+    background-color: #C6C5B9;
+    justify-content: center;
+    border: 10px solid #62929E;
+    border-radius: 5px;
+    margin: 10px auto;
+    animation: fadeIn 5s;
+}
+
+
+.mainHeader {
+    display: block;
+    font-size: 1.9rem;
+    margin: auto;
+    padding: 0 5px 10px 5px;
+    background-color: #C6C5B9;
+    justify-content: center;
+    text-align: center;
+    color: #62929E;
+    }
+  
+
+.titleBar {
+    display: block;
+    margin: auto;
+    animation: fadeIn ease 10s;
+        
+      }
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+
+
+input{    
+    display: block;
+    border-radius: 4px;
+    padding: 6px;
+    color: #485051;
+    width: 18%;   
+    border:solid 2px #62929E;
+    font-size: 1rem;
+    margin: center;
+   -webkit-border-radius: 5px;
+
+}
+
+input:focus {
+    background-color: lightyellow;
+    border: 3px solid #393D3F;
+    box-shadow: 0 0 5px #9dc0db;
+  }
+
+
+#footer {
+    font-size: 1rem;
+    background-color: #C6C5B9;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    max-width:960px;
+    font-weight: bold;
+}
+
+
+.list-display img {
+    transition: width 2s;
+}
+
+.list-display img:hover{
+    width: 50%;
+    height: auto;
+}
+
+.hoverMessage {
+    font-size: 1rem;
+    color: #393D3F;
+    font-style: italic;
+}
+
+
+    /* Link
+--------------------------------------------------------------------------------------------------------------- */
+a {
+	text-decoration: none!important;
+}
+
+a[href^="https://www.google.com/?hl=en"] {
+	display: none !important;
+} 
+
+/* List
+--------------------------------------------------------------------------------------------------------------- */
+ul {
+  column-count: 2;
+  column-rule: dotted 1px #333;
+  top: 20px !important;
+  left: 0px !important;
+  position: relative !important;
+}
+
+li{
+  list-style-type: none !important;
+  height: 250px;
+  background-color: whitesmoke;
+  border-radius: 16px;
+  padding: 5px;
+}
+
+/* input
+--------------------------------------------------------------------------------------------------------------- */
+
+
+input:focus {
+  border-color:#333;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Book
+--------------------------------------------------------------------------------------------------------------- */
+
+.book-thumbnail {
+  width: 110px;
+	margin-right: 32px;
+	border-radius: 16px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s;
+	transform: translate(0, -4px);
+	animation: zoomin 0.5s;
+  border: solid 2px #C6C5B9;
+} 
+
+ .book-thumbnail:hover {
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+	transform: translate(0, -10px) scale(2.5);
+} 
+
+.book-title {
+	display: -webkit-box;
+	overflow: hidden;
+	margin: 0;
+	text-overflow: ellipsis;
+	font-weight: 900;
+	-webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: center;
+  
+} 
+
+.book-description {
+  margin-top: 15px;
+  padding: 10px 4px; }
+
+img{
+  text-align: center !important;
+  margin: 5px;
+  padding: 5px;
+  width: 100px;
+  height: 150px;
+}
+
+.book-authors {
+	display: -webkit-box;
+	overflow: hidden;
+	margin: 16px;
+	color: rgba(0, 0, 0, 0.5);
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.book-categories {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 32px;
+  color: #fff;
+  text-align: center !important;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: rgba(51, 51, 51, 0.507);
+}
+
+.book-preview {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 32px;
+  color: #fff;
+  text-align: center !important;
+  font-weight: 600;
+  font-size: 12px;
+  background-color:#7bc6cc;
+}
+
+.internal {
+  float: left;
+  width: 30%;
+}
+
+.internalDetail {
+  float: left;
+  width: 70%;
+}
+
+.external {
+  float: center;
+  display: table;
+  width:100% ;
+}
+
+.detail{
+  margin: 10px;
+  vertical-align: middle;
+}
+
+form{
+  border-radius: 16px;
+  padding: 5px;
+}
+
+.filter{
+  text-align: center !important;
+  display: inline-flex;
+}
+
+
+#general {
+ visibility: hidden; }
+
+ .ui-helper-hidden-accessible{
+  visibility: hidden;
+ }
+ button, input {
+  overflow: visible;
+ }
+
+ #resetButton {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0.5px;
+  background-color: #546A7B;
+  text-align: center;
+  color: #FDFDFF;
+  border-radius: 0.3em;
+  margin-top: 0.8px;
+}
+
+ #resetButton:hover {
+  background-color: #393D3F;
+  color: #FDFDFF;
+}
+
+
+
+
+
+
+button {
+  background-color: lightskyblue;
+  border: 2px solid turquoise;
+  border-radius: 0.3em;
+  margin: 0.75em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button:hover {
+  padding: 0.75em 2em;
+  background-color: white;
+}
+
+button:hover:disabled {
+  padding: 0.5em;
+  background-color: lightskyblue;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#pages {
+  margin: auto;
+}
