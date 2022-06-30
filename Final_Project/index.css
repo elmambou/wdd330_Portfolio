@@ -214,6 +214,11 @@ input:focus {
 	transform: translate(0, -10px) scale(2.5);
 } 
 
+
+
+
+
+
 .book-title {
 	display: -webkit-box;
 	overflow: hidden;
@@ -269,6 +274,18 @@ img{
   font-size: 12px;
   background-color:#7bc6cc;
 }
+
+
+
+ .book-preview:hover {
+	box-shadow: 0 3x 4px rgba(0, 0, 0, 0.4);
+	transform: translate(0, -10px) scale(1.8);
+}
+
+
+
+
+
 
 .internal {
   float: left;
