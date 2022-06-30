@@ -278,8 +278,8 @@ img{
 
 
  .book-preview:hover {
-	box-shadow: 0 3x 4px rgba(135, 206, 235);
-	transform: translate(0, -10px) scale(1.8);
+	box-shadow: 0 3x 4px rgba(205, 220, 57.07);
+	transform: translate(0, -10px) scale(1.6);
 }
 
 
