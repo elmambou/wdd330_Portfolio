@@ -19,7 +19,7 @@ const links = {
       { label: "  ", url: "#"},
       { label: " ", url: "#"},
       { label: "  ", url: "#"},
-      { label: "Final Project(Under construction)",url: "Final_Project/index.html"},
+      { label: "Final Project(Under construction)",url: "#Final_Project/index.html#"},
   ]
 }
 
