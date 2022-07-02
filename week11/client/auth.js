@@ -21,7 +21,7 @@ export default class Auth {
 
     try {
       // 1. use the makeRequest function to pass our credentials to the server
-      let data = await makeRequest('week11.html', 'POST', null, null, b64);
+      let data = await makeRequest('index.html', 'POST', null, null, b64);
       
       // 2. if we get a successful response...we have a token!  Store it since we will need to send it with every request to the API.
       this.jwtToken = data.accessToken;
@@ -47,7 +47,7 @@ export default class Auth {
   async getCurrentUser(email) {
     try {
       // 3. add the code here to make a request for the user identified by email...don't forget to send the token!
-      let user = await makeRequest(`week11.html?email=${email}`, 'GET', null, this.jwtToken);
+      let user = await makeRequest(`index.html?email=${email}`, 'GET', null, this.jwtToken);
       return user;
     } catch (error) {
       // if there were any errors display them
