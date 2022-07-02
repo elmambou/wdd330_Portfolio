@@ -1,0 +1,66 @@
+:root {
+    --width: 90%;
+    --max-width: 1024px;
+}
+
+/* HTML Selectors */
+
+html {
+  max-width: var(--max-width);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+article {
+    margin: 10px;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    max-width: 940px;
+    margin: 45px auto;
+    padding-top: 10px;
+}
+
+footer {
+    background-color:rgb(135, 206, 235);
+    border-radius: 9px;
+    color: black;
+    padding: 10px 0 1px 0;
+    text-align: center;
+    
+}
+
+header {
+    margin: auto;
+    text-align: center;
+}
+main {
+    text-align: left;
+}
+pre {
+    background-color: rgb(236, 236, 236);
+    border-style: solid;
+  }
+  
+  table,
+  td {
+    border: 1px solid #000;
+  }
+#header-title {
+    background-color: rgb(135, 206, 235);
+    padding: 10px;
+    border-radius: 9px;
+
+}
+h2 {
+    border-bottom: 1px solid black;
+}
+
+#update {
+    color: brown;
+    font-size: small; 
+}
+#footer-link {
+    color: black;
+}
