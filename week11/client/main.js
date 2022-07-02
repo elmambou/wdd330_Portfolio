@@ -1,5 +1,5 @@
 
-import { makeRequest } from './authHelpers.js';
+import { makeRequest } from './Helpers.js';
 import Auth from './auth.js';
 
 const auth = new Auth();
