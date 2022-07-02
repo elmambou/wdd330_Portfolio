@@ -21,7 +21,7 @@ export default class Auth {
 
     try {
       // 1. use the makeRequest function to pass our credentials to the server
-      let data = await makeRequest('index.html', 'POST', b64);
+      let data = await makeRequest('index.html', 'POST', null, null, b64);
       
       // 2. if we get a successful response...we have a token!  Store it since we will need to send it with every request to the API.
       this.jwtToken = data.accessToken;
