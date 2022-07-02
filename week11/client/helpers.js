@@ -34,10 +34,10 @@ export async function makeRequest(endPoint, method = 'GET', body = null, token =
   if (!response.ok) {
     // server will send a 500 server error if the token expires...or a 401 if we are not authorized, ie bad username/password combination, and a 404 if the URL we requested does not exist. All of these would cause response.ok to be false
 
-    console.log(response);
-    throw new Error(`${data.status}: ${data.message}`);
-  } else return data;}
-
-  // not catching the error here...so we will need to catch it later on and handle it.
-
-
+      console.log(response);
+      throw new Error(`${data.status}: ${data.message}`);
+    } else {
+      return data;
+    }
+    // not catching the error here...so we will need to catch it later on and handle it.
+}
