@@ -15,11 +15,11 @@ export default class Auth {
     const password = document.getElementById('password');
     const username = document.getElementById('username');
 
-    const b64 = btoa(`${username.value}:${password.value}`);    // Convert to Base64 for Basic Authentication
+    const postData = btoa(`${username.value}:${password.value}`);    // Convert to Base64 for Basic Authentication
 
     try {
       // 1. use the makeRequest function to pass our credentials to the server
-      let data = await makeRequest('login', 'POST', null, null, b64);
+      let data = await makeRequest('login', 'POST', null, null, postData);
       
       // 2. if we get a successful response...we have a token!  Store it since we will need to send it with every request to the API.
       this.jwtToken = data.accessToken;
