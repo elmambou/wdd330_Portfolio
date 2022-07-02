@@ -36,9 +36,9 @@ export async function makeRequest(endPoint, method = 'GET', body = null, token =
 
     console.log(response);
     throw new Error(`${data.status}: ${data.message}`);
-  } else {
-      return data;
-  }
+  } else return data;
 
   // not catching the error here...so we will need to catch it later on and handle it.
 }
+   
+export { makeRequest };
