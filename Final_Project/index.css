@@ -3,7 +3,7 @@
 
 body {
     color: #393D3F;
-    background-color: #ffefba;
+    background-color:#62929E;
     
     font-family: 'Lato', sans-serif;
     font-size: 0.8rem;
@@ -23,15 +23,13 @@ h1 {
 
 h3 {
     color: #393D3F;
-    background-color: #FDFDFF;
+    background-color: #C6C5B9;
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
     padding: 0;
     text-align: center !important;
-
-
 
 }
 
@@ -63,11 +61,7 @@ main {
     justify-content: center;
 }
 
-.euLogo img {
-    height: 25px;
-    /* height: auto; */
 
-}
 
 .euImg img{
     display: block;
@@ -81,6 +75,19 @@ main {
     margin: 10px auto;
     animation: fadeIn 5s;
 }
+
+.euImg:hover {
+  padding: 0.75em 2em;
+  background-color: green;
+}
+
+.euImg:hover:disabled {
+  padding: 0.5em;
+  background-color: lightskyblue;
+}
+
+
+
 
 
 .mainHeader {
@@ -122,7 +129,7 @@ input{
 }
 
 input:focus {
-    background-color: lightyellow;
+    background-color: blueviolet;
     border: 3px solid #393D3F;
     box-shadow: 0 0 5px #9dc0db;
   }
@@ -214,11 +221,6 @@ input:focus {
 	transform: translate(0, -10px) scale(2.5);
 } 
 
-
-
-
-
-
 .book-title {
 	display: -webkit-box;
 	overflow: hidden;
@@ -277,14 +279,6 @@ img{
 
 
 
- .book-preview:hover {
-	box-shadow: 0 3x 4px rgba(205, 220, 57.07);
-	transform: translate(0, -10px) scale(1.6);
-}
-
-
-
-
 
 
 .internal {
@@ -325,57 +319,31 @@ form{
  .ui-helper-hidden-accessible{
   visibility: hidden;
  }
- button, input {
-  overflow: visible;
- }
-
- #resetButton {
-  font-size: 1.5rem;
-  width: 100%;
-  margin: 10px auto;
-  padding: 0.5px;
-  background-color: #546A7B;
-  text-align: center;
-  color: #FDFDFF;
-  border-radius: 0.3em;
-  margin-top: 0.8px;
+ input {
+    overflow: visible;
+    display: inline;
+    background-color: #546A7B;
+    border: 2px solid #393D3F;
+    border-radius: 0.3em;
+    margin: 0.75em;
+    padding: 0.5em;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    width: 30%;
 }
 
- #resetButton:hover {
-  background-color: #393D3F;
-  color: #FDFDFF;
-}
-
-
-
-
-
-
-button {
-  background-color: lightskyblue;
-  border: 2px solid turquoise;
-  border-radius: 0.3em;
-  margin: 0.75em;
-  padding: 0.5em;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-button:hover {
+input:hover {
   padding: 0.75em 2em;
-  background-color: white;
+  background-color: green;
 }
 
-button:hover:disabled {
+input:hover:disabled {
   padding: 0.5em;
   background-color: lightskyblue;
 }
 
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-}
 
 #pages {
   margin: auto;
