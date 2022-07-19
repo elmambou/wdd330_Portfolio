@@ -236,20 +236,9 @@ function initialize(isbn, title) {
   }, 15000);
 }
 
+/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-    //Finding the next and previous buttons
+    Finding the next and previous buttons
     const previousButton = document.querySelector("#previous"); 
     const nextButton = document.querySelector("#next");
     
@@ -269,7 +258,7 @@ function initialize(isbn, title) {
       nextButton.onclick = () => getNext();
     }
 
-    //Function for getting the previous page's results
+    Function for getting the previous page's results
     function getPrevious() {
       console.log(response.previous);
       showPeople(response.previous);
@@ -280,6 +269,8 @@ function initialize(isbn, title) {
       console.log(response.next);
       showPeople(response.next);
     }
+    
+    */
 
     
 function getPageUrls() {
