@@ -30,10 +30,7 @@ const books = (function ($) {
     filters: [
       { name: 'title', param: 'intitle', placeholder: 'Title', active: false },
       { name: 'authors', param: 'inauthor', placeholder: 'Authors', active: false },
-      { name: 'category', param: 'subject', placeholder: 'Category', active: false, pattern:"[Ff]antasy|[Ff]iction|[Aa]ction|[Aa]dventure|[Cc]ooking|[Hh]orror|[Rr]omance|[Cc]hildren|[Hh]istory|[Hh]umor|[Rr]eligion|[Pp]arenting|[Yy]outh|[Bb]usiness|[Mm]anagement"
-    
-    
-    },
+      { name: 'category', param: 'subject', placeholder: 'Category', active: false},
       { name: 'publisher', param: 'inpublisher', placeholder: 'Publisher', active: false },
       { name: 'ISBN', param: 'isbn', placeholder: 'ISBN', active: false },
       { name: 'general', param: 'general', placeholder: 'All fields', active: false }
